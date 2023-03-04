@@ -1,0 +1,12 @@
+--tao database
+create database DOANTN
+--xai database
+use database
+--tạo các bảng
+create table LOAISACH
+(
+	MALOAISACH int,
+	LOAISACH nvarchar(MAX),
+
+	constraint PK_LOAISACH primary key (MALOAISACH),
+)

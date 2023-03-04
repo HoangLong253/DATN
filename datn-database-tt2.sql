@@ -306,7 +306,7 @@ values ('NV03', N'Tran Kha C', 'NgVA@gmail.com', '0891234567', 1, CURRENT_TIMEST
 --GioHang
 INSERT into
 GioHang(MaGioHang, MaNgDung, TongTien, updated_at, deleted_at)
-VALUES('GIOH01', 'ND01', 12000, '', '');
+VALUES('GIOH01', 'ND01', 0, '', '');
 
 --NguoiDung
 insert into
@@ -321,7 +321,7 @@ values ('GIAOH01', 'HDB01', 'Tran Thi D', 'T2D@gmail.com', '0891234567', 1, CURR
 --CTGioHang
 INSERT into 
 CTGioHang(MaGioHang, MaSach, SL, GiaTien, Tong, updated_at, deleted_at)
-VALUES('GIOH01', 'S0001', 2, 6000, 12000, '', '');
+VALUES('GIOH01', 'S0001', 2, 6000, 0, '', '');
 
 --LoaiSach
 insert into
@@ -331,7 +331,7 @@ values('GK', N'Sách giáo khoa', '');
 --NhaXuatBan
 insert into
 NhaXuatBan(MaNXB, TenNXB, created_at)
-values('GD', 'Giáo Dục', CURRENT_TIMESTAMP);
+values('GD', N'Giáo Dục', CURRENT_TIMESTAMP);
 
 --Sach
 insert into
@@ -360,6 +360,38 @@ insert into
 CTHoaDonBan(MaHDBan, MaSach, Sluong, GiaTien)
 values('HDB01', 'S0001', 10, 6000);
 
+--Kho
+insert into
+Kho(MaKho, MaHDNhap, MaSach, Sluong, create_at)
+values('K01', 'HDN01', 'S0001', 1000, CURRENT_TIMESTAMP)
+
+
+--------//--------
+
+--join inner join
+
+--------//--------
+
+--select
+
+SELECT *
+FROM NhanVien
+
+go 
+
+select TenSach, TenNXB, DonGia, HinhAnh
+from Sach S join NhaXuatBan N on S.MaNXB = N.MaNXB
+
+select *
+from NguoiDung
+
+select *
+from GioHang
+
+select *
+from Kho
+
+--update
 
 --------//---------
 
