@@ -301,7 +301,7 @@ values ('NV02', N'Lại Thị B', 'LTB@gmail.com', '0891234567', 1, CURRENT_TIME
 
 insert into 
 NhanVien(MaNV, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at) 
-values ('NV03', N'Tran Kha C', 'NgVA@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
+values ('NV03', N'Trần Kha C', 'NgVA@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
 
 --GioHang
 INSERT into
@@ -316,7 +316,7 @@ values ('ND01', 'GIOH01', N'Hoàng C', 'NC@gmail.com', '0891234567', 1, CURRENT_
 --NgGiaoHang
 insert into
 NgGiaoHang(MaNgGiaoHang, MaHDBan, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at)
-values ('GIAOH01', 'HDB01', 'Tran Thi D', 'T2D@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
+values ('GIAOH01', 'HDB01', 'Trần Thị D', 'T2D@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
 
 --CTGioHang
 INSERT into 
@@ -360,6 +360,10 @@ insert into
 CTHoaDonBan(MaHDBan, MaSach, Sluong, GiaTien)
 values('HDB01', 'S0001', 10, 6000);
 
+insert into
+CTHoaDonBan(MaHDBan, MaSach, Sluong, GiaTien)
+values('HDB01', 'S0001', 5, 6000);
+
 --Kho
 insert into
 Kho(MaKho, MaHDNhap, MaSach, Sluong, create_at)
@@ -377,7 +381,13 @@ values('K01', 'HDN01', 'S0001', 1000, CURRENT_TIMESTAMP)
 SELECT *
 FROM NhanVien
 
+select HoTen, MaHDBan, TongTien
+from NhanVien nv join HoaDonBan hdb on nv.MaNV = hdb.MaNV
+
 go 
+
+select hdb.MaHDBan, MaSach, cthdb.Sluong, cthdb.GiaTien, cthdb.GiaTien * cthdb.Sluong as TongTien
+from HoaDonBan hdb join CTHoaDonBan cthdb on hdb.MaHDBan = cthdb.MaHDBan
 
 select TenSach, TenNXB, DonGia, HinhAnh
 from Sach S join NhaXuatBan N on S.MaNXB = N.MaNXB
