@@ -26,6 +26,7 @@ create table Sach
 	HinhAnh varchar(MAX),
 	DonGia int,
 	TrangThai bit,
+	NoiBat bit,
 	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 	updated_at datetime,
 
