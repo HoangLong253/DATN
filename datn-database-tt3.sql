@@ -1,8 +1,14 @@
+﻿create database DATN
+go
+
+use DATN
+go
+
 create table LoaiSach
 (
-	MaLoaiSach int,
+	MaLoaiSach varchar(2),
 	TenLoaiSach nvarchar(30),
-	updated_at TIMESTAMP,
+	updated_at datetime,
 
 	constraint PK_LoaiSach primary key (MaLoaiSach),
 )
@@ -12,25 +18,25 @@ go
 create table Sach
 (
 	MaSach varchar(10),
-	MaNXB int,
-	MaLoaiSach int,
-	MaGiamGia varchar(5),
+	MaNXB varchar(2),
+	MaLoaiSach varchar(2),
+	MaGiamGia varchar(10),
 	TenSach nvarchar(50),
 	MoTa nvarchar(MAX),
 	HinhAnh varchar(MAX),
 	DonGia int,
 	TrangThai bit,
-	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime,
 
 	constraint PK_Sach primary key (MaSach),
 )
 
 create table NhaXuatBan
 (
-	MaNXB int,
+	MaNXB varchar(2),
 	TenNXB nvarchar(25),
-	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 
 	constraint PK_NhaXuatBan primary key (MaNXB),
 )
@@ -43,9 +49,9 @@ create table NguoiDung
 	Email varchar(30),
 	SDT varchar(10),
 	TrangThai bit,
-	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime,
+	deleted_at datetime,
 
 	constraint PK_NguoiDung primary key (MaNgDung),
 )
@@ -57,45 +63,45 @@ create table NhanVien
 	Email varchar(30),
 	SDT varchar(10),
 	TrangThai bit,
-	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime,
+	deleted_at datetime,
 
 	constraint PK_NhanVien primary key (MaNV),
 )
 
 create table NgGiaoHang
 (
-	MaNgGiaoHang varchar(5),
-	MaHDBan int,
+	MaNgGiaoHang varchar(10),
+	MaHDBan varchar(5),
 	HoTen nvarchar(50), 
 	Email varchar(30),
 	SDT varchar(10),
 	TrangThai bit,
-	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-	deleted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime,
+	deleted_at datetime,
 
 	constraint PK_GiaoHang primary key (MaNgGiaoHang),
 )
 
 create table HoaDonBan
 (
-	MaHDBan int,
+	MaHDBan varchar(5),
 	MaNV varchar(5),
 	MaNgDung varchar(5),
-	MaNgGiaoHang varchar(5),
+	MaNgGiaoHang varchar(10),
 	TongTien int,
 	TrangThaiGiaoHang int,
 	TrangThaiThanhToan bit,
-	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 
 	constraint PK_HoaDonBan primary key (MaHDBan),
 )
 
 create table CTHoaDonBan
 (
-	MaHDBan int,
+	MaHDBan varchar(5),
 	MaSach varchar(10),
 	Sluong int,
 	GiaTien int,
@@ -103,82 +109,97 @@ create table CTHoaDonBan
 
 create table HoaDonNhap
 (
-	MaHDNhap int,
+	MaHDNhap varchar(5),
 	MaNV varchar(5),
 	TongTien int,
-	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 
 	constraint PK_HoaDonNhap primary key (MaHDNhap),
 )
 
 create table CTHoaDonNhap
 (
-	MaCTHDN int NOT NULL AUTO_INCREMENT,
-	MaHDNhap int,
+	MaHDNhap varchar(5),
 	MaSach varchar(10),
 	Sluong int,
 	GiaTien int,
-
-	constraint PK_Kho primary key(MaCTHDN)
 )
 
 create table Kho 
 (
 	MaKho varchar(5),
-	MaHDNhap int,
+	MaHDNhap varchar(5),
 	MaSach varchar(10),
 	Sluong int,
-	create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	create_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 
 	constraint PK_Kho primary key (MaKho),
 )
 
 create table GiamGia
 (
-	MaGiamGia varchar(5),
+	MaGiamGia varchar(10) UNIQUE,
 	PhanTramGiam float,
-	create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	create_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
+	deleted_at datetime,
+)
+
+/*create table GiamGia
+(
+	MaGiamGia varchar(10),
+	PhanTramGiam float,
+	create_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 	deleted_at datetime,
 
-	constraint PK_GiamGia primary key (MaGiamGia)
-)
+	constraint PK_GiamGia primary key (MaGiamGia),
+)*/
 
 create table DSGiamGia
 (
-	MaDSGGia int NOT NULL AUTO_INCREMENT,
 	MaNgDung varchar(5),
-	MaGiamGia varchar(5),
-	create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	MaGiamGia varchar(10),
+	create_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 	deleted_at datetime,
-
-	constraint PK_DSGiamGia primary key (MaDSGGia)
 )
 
 create table GioHang
 (
 	MaGioHang varchar(10),
-	SL int, 
+	MaNgDung varchar(5),
 	TongTien int,
-	updated_at TIMESTAMP,
-	deleted_at TIMESTAMP,
+	updated_at datetime,
+	deleted_at datetime,
 
 	constraint PK_GioHang primary key (MaGioHang),
 )
 
 create table CTGioHang
 (
-	MaCTGHang int NOT NULL AUTO_INCREMENT,
 	MaGioHang varchar(10),
 	MaSach varchar(10),
+	SL int,
 	GiaTien int,
-	updated_at TIMESTAMP,
-	deleted_at TIMESTAMP,
-
-	constraint PK_CTGHang primary key (MaCTGHang),
+	Tong int,
+	updated_at datetime,
+	deleted_at datetime,
 )
 
-go
+/*create table DiaChi_NgDung
+(
+	MaNgDung varchar(5),
+	Diachi varchar(45),
+	TrangThai bit,
+	create_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
+	updated_at datetime,
+	deleted_at datetime,
+)*/
 
+go
+--updated_at, deleted_at
+
+--Khoá ngoại
+
+--Sach
 alter table Sach
 add constraint FK_Sach_LoaiSach
 foreign key (MaLoaiSach)
@@ -194,6 +215,7 @@ add constraint FK_Sach_GiamGia
 foreign key (MaGiamGia)
 references GiamGia(MaGiamGia)
 
+--CTHoaDonBan
 alter table CTHoaDonBan
 add constraint FK_CTHoaDonBan_HoaDonBan
 foreign key (MaHDBan)
@@ -204,6 +226,7 @@ add constraint CTHoaDonBan_Sach
 foreign key (MaSach)
 references Sach(MaSach)
 
+--CTHoaDonNhap
 alter table CTHoaDonNhap
 add constraint FK_CTHoaDonNhap_HoaDonNhap
 foreign key (MaHDNhap)
@@ -214,6 +237,7 @@ add constraint FK_CTHoaDonNhap_Sach
 foreign key (MaSach)
 references Sach(MaSach)
 
+--Kho
 alter table Kho
 add constraint FK_Kho_Sach
 foreign key (MaSach)
@@ -224,16 +248,19 @@ add constraint FK_Kho_HoaDonNhap
 foreign key (MaHDNhap)
 references HoaDonNhap(MaHDNhap)
 
+--NgDung
 alter table NguoiDung
 add constraint FK_NguoiDung_GioHang
 foreign key (MaGioHang)
 references GioHang(MaGioHang)
 
+--HoaDonNhap
 alter table HoaDonNhap
 add constraint HoaDonNhap_NhanVien
 foreign key (MaNV)
 references NhanVien(MaNV)
 
+--HoaDonBan
 alter table HoaDonBan
 add constraint HoaDonBan_NhanVien
 foreign key (MaNV)
@@ -244,11 +271,13 @@ add constraint FK_HoaDonBan_NgGiaoHang
 foreign key (MaNgGiaoHang)
 references NgGiaoHang(MaNgGiaoHang)
 
+-- CTGioHang
 alter table CTGioHang
 add constraint FK_CTGioHang_GioHang
 foreign key (MaGioHang)
 references GioHang(MaGioHang)
 
+--DSGiamGia
 alter table DSGiamGia
 add constraint FK_DSGiamGia_NgDung
 foreign key (MaNgDung)
@@ -258,6 +287,8 @@ alter table DSGiamGia
 add constraint FK_DSGiamGia_GiamGia
 foreign key (MaGiamGia)
 references GiamGia(MaGiamGia)
+
+--insert into
 
 --NhanVien
 insert into 
@@ -337,3 +368,100 @@ values('HDB01', 'S0001', 5, 6000);
 insert into
 Kho(MaKho, MaHDNhap, MaSach, Sluong, create_at)
 values('K01', 'HDN01', 'S0001', 1000, CURRENT_TIMESTAMP)
+
+
+--------//--------
+
+--join inner join
+
+--------//--------
+
+--select
+
+SELECT *
+FROM NhanVien
+
+select HoTen, MaHDBan, TongTien
+from NhanVien nv join HoaDonBan hdb on nv.MaNV = hdb.MaNV
+
+go 
+
+select hdb.MaHDBan, MaSach, cthdb.Sluong, cthdb.GiaTien, cthdb.GiaTien * cthdb.Sluong as TongTien
+from HoaDonBan hdb join CTHoaDonBan cthdb on hdb.MaHDBan = cthdb.MaHDBan
+
+select TenSach, TenNXB, DonGia, HinhAnh
+from Sach S join NhaXuatBan N on S.MaNXB = N.MaNXB
+
+select *
+from NguoiDung
+
+select *
+from GioHang
+
+select *
+from Kho
+
+--update
+
+--------//---------
+
+--delete table
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CTGioHang]') AND type in (N'U'))
+DROP TABLE [dbo].[CTGioHang]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DSGiamGia]') AND type in (N'U'))
+DROP TABLE [dbo].[DSGiamGia]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CTHoaDonBan]') AND type in (N'U'))
+DROP TABLE [dbo].[CTHoaDonBan]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NguoiDung]') AND type in (N'U'))
+DROP TABLE [dbo].[NguoiDung]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GioHang]') AND type in (N'U'))
+DROP TABLE [dbo].[GioHang]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[CTHoaDonNhap]') AND type in (N'U'))
+DROP TABLE [dbo].[CTHoaDonNhap]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HoaDonBan]') AND type in (N'U'))
+DROP TABLE [dbo].[HoaDonBan]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NgGiaoHang]') AND type in (N'U'))
+DROP TABLE [dbo].[NgGiaoHang]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Kho]') AND type in (N'U'))
+DROP TABLE [dbo].[Kho]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[Sach]') AND type in (N'U'))
+DROP TABLE [dbo].[Sach]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NhaXuatBan]') AND type in (N'U'))
+DROP TABLE [dbo].[NhaXuatBan]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[LoaiSach]') AND type in (N'U'))
+DROP TABLE [dbo].[LoaiSach]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[HoaDonNhap]') AND type in (N'U'))
+DROP TABLE [dbo].[HoaDonNhap]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[NhanVien]') AND type in (N'U'))
+DROP TABLE [dbo].[NhanVien]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GiamGia]') AND type in (N'U'))
+DROP TABLE [dbo].[GiamGia]
+GO
