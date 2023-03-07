@@ -350,8 +350,6 @@ insert into
 Sach(MaSach, MaNXB, MaLoaiSach, MaGiamGia, TenSach, MoTa, HinhAnh, DonGia, TrangThai, created_at, updated_at)
 values ('S0001', 'GD', 'GK', null, N'Ngữ văn 6 tập 1', '', '', 6000, 1, CURRENT_TIMESTAMP, '');
 
---Kho
-
 --HoaDonNhap
 insert into
 HoaDonNhap(MaHDNhap, MaNV, TongTien, created_at)
@@ -381,6 +379,10 @@ insert into
 Kho(MaKho, MaHDNhap, MaSach, Sluong, create_at)
 values('K01', 'HDN01', 'S0001', 1000, CURRENT_TIMESTAMP)
 
+--DS_Kho
+insert into
+DS_Kho(MaKho, TenKho)
+values('K01', 'Kho 1')
 
 --------//--------
 
@@ -412,6 +414,9 @@ from GioHang
 
 select *
 from Kho
+
+select *
+from DS_Kho
 
 --update
 
