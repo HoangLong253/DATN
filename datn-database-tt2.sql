@@ -133,8 +133,14 @@ create table Kho
 	MaSach varchar(10),
 	Sluong int,
 	create_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
+)
 
-	constraint PK_Kho primary key (MaKho),
+create table DS_Kho
+(
+	MaKho varchar(5),
+	TenKho varchar(MAX),
+
+	constraint PK_DS_Kho primary key (MaKho),
 )
 
 create table GiamGia
@@ -248,6 +254,11 @@ alter table Kho
 add constraint FK_Kho_HoaDonNhap
 foreign key (MaHDNhap)
 references HoaDonNhap(MaHDNhap)
+
+alter table Kho
+add constraint FK_Kho_DS_Kho
+foreign key (MaKho)
+references DS_Kho(MaKho)
 
 --NgDung
 alter table NguoiDung
