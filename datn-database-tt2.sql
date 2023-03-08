@@ -6,7 +6,7 @@ go
 
 create table LoaiSach
 (
-	MaLoaiSach varchar(2),
+	MaLoaiSach varchar(5),
 	TenLoaiSach nvarchar(30),
 	updated_at datetime,
 
@@ -18,8 +18,8 @@ go
 create table Sach
 (
 	MaSach varchar(10),
-	MaNXB varchar(2),
-	MaLoaiSach varchar(2),
+	MaNXB varchar(5),
+	MaLoaiSach varchar(5),
 	MaGiamGia varchar(10),
 	TenSach nvarchar(50),
 	MoTa nvarchar(MAX),
@@ -35,7 +35,7 @@ create table Sach
 
 create table NhaXuatBan
 (
-	MaNXB varchar(2),
+	MaNXB varchar(5),
 	TenNXB nvarchar(25),
 	created_at DATETIME2 DEFAULT CURRENT_TIMESTAMP,
 
@@ -340,6 +340,14 @@ insert into
 LoaiSach(MaLoaiSach, TenLoaiSach, updated_at)
 values('GK', N'Sách giáo khoa', '');
 
+insert into
+LoaiSach(MaLoaiSach, TenLoaiSach, updated_at)
+values('TK', N'Sách tham khảo', '');
+
+insert into
+LoaiSach(MaLoaiSach, TenLoaiSach, updated_at)
+values('KHTN', N'Sách khoa học tự nhiên', '');
+
 --NhaXuatBan
 insert into
 NhaXuatBan(MaNXB, TenNXB, created_at)
@@ -350,6 +358,10 @@ insert into
 Sach(MaSach, MaNXB, MaLoaiSach, MaGiamGia, TenSach, MoTa, HinhAnh, DonGia, TrangThai, created_at, updated_at)
 values ('S0001', 'GD', 'GK', null, N'Ngữ văn 6 tập 1', '', '', 6000, 1, CURRENT_TIMESTAMP, '');
 
+insert into
+Sach(MaSach, MaNXB, MaLoaiSach, MaGiamGia, TenSach, MoTa, HinhAnh, DonGia, TrangThai, created_at, updated_at)
+values ('S0002', 'GD', 'GK', null, N'Ngữ văn 6 tập 2', '', '', 6000, 1, CURRENT_TIMESTAMP, '');
+
 --HoaDonNhap
 insert into
 HoaDonNhap(MaHDNhap, MaNV, TongTien, created_at)
@@ -357,8 +369,8 @@ values('HDN01', 'NV01', 60000, CURRENT_TIMESTAMP);
 
 --HoaDonBan
 insert into
-HoaDonBan(MaHDBan, MaNV, TongTien, created_at)
-values('HDB01', 'NV03', 60000, CURRENT_TIMESTAMP);
+HoaDonBan(MaHDBan, MaNV, MaNgDung, MaNgGiaoHang, TongTien, created_at)
+values('HDB01', 'NV03', 'ND01', 'GIAOH01',60000, CURRENT_TIMESTAMP);
 
 --CTHoaDonNhap
 insert into
@@ -374,15 +386,17 @@ insert into
 CTHoaDonBan(MaHDBan, MaSach, Sluong, GiaTien)
 values('HDB01', 'S0001', 5, 6000);
 
+--DS_Kho
+insert into
+DS_Kho(MaKho, TenKho)
+values('K01', 'Kho 1')
+
 --Kho
 insert into
 Kho(MaKho, MaHDNhap, MaSach, Sluong, create_at)
 values('K01', 'HDN01', 'S0001', 1000, CURRENT_TIMESTAMP)
 
---DS_Kho
-insert into
-DS_Kho(MaKho, TenKho)
-values('K01', 'Kho 1')
+
 
 --------//--------
 
@@ -395,13 +409,24 @@ values('K01', 'Kho 1')
 SELECT *
 FROM NhanVien
 
+select *
+from LoaiSach
+
 select HoTen, MaHDBan, TongTien
 from NhanVien nv join HoaDonBan hdb on nv.MaNV = hdb.MaNV
 
 go 
 
-select hdb.MaHDBan, MaSach, cthdb.Sluong, cthdb.GiaTien, cthdb.GiaTien * cthdb.Sluong as TongTien
+select *
+from HoaDonBan
+
+select hdb.MaHDBan, cthdb.GiaTien * cthdb.Sluong as TongTien, SUM(TongTien)
+from CTHoaDonBan cthdb join HoaDonBan hdb on cthdb.MaHDBan = hdb.MaHDBan
+				   
+
+select hdb.MaHDBan, TenSach, cthdb.Sluong, cthdb.GiaTien, cthdb.GiaTien * cthdb.Sluong as TongTien
 from HoaDonBan hdb join CTHoaDonBan cthdb on hdb.MaHDBan = cthdb.MaHDBan
+				   join Sach s on cthdb.MaSach = s.MaSach
 
 select TenSach, TenNXB, DonGia, HinhAnh
 from Sach S join NhaXuatBan N on S.MaNXB = N.MaNXB
@@ -481,4 +506,8 @@ GO
 
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[GiamGia]') AND type in (N'U'))
 DROP TABLE [dbo].[GiamGia]
+GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[DS_Kho]') AND type in (N'U'))
+DROP TABLE [dbo].[DS_Kho]
 GO
