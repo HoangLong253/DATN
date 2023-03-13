@@ -104,8 +104,14 @@
                         <img class="header__main-logo-img " src="./assets/images/logo.png" alt="">
                     </div>
                     <div class="header__main-cpnname">
-                    <a href="read.php" class="header__navbar-icon-link">
-                        <i class="header__navbar-icon fa-brands fa-square-instagram"></i>
+                    <a href="book.php">
+                        Sách
+                    </a>
+                    <a href="book.php">
+                        Nhân Viên
+                    </a>
+                    <a href="book.php">
+                        Người dùng
                     </a>
                     </div>
                     <div class="header__main-search">
