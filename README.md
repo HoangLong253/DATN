@@ -6,4 +6,4 @@ Lưu ý: muốn chạy thì làm theo các bước
 - database tạo thành công, bây giờ chạy web thôi
 
 Cách chạy file php không cần bỏ vô xampp
-vô link xem :v, lười nói quá https://drive.google.com/file/d/1x7AVgDVPuzymGuASqaA3pjNLSi1Q8E-Z/view?usp=sharing
+vô link xem :v, lười viết quá https://drive.google.com/file/d/1x7AVgDVPuzymGuASqaA3pjNLSi1Q8E-Z/view?usp=sharing
