@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sách</title>
+    <title>Nhân viên</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -37,29 +37,25 @@
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM Sach s join NhaXuatBan nxb on s.MaNXB = nxb.MaNXB";
+                    $sql = "SELECT * FROM NhanVien";
                     if($result = $mysqli->query($sql)){
                         if($result->num_rows > 0){
                             echo '<table class="table table-bordered table-striped">';
                                 echo "<thead>";
                                     echo "<tr>";
-                                        echo "<th>Hình ảnh</th>";
-                                        echo "<th>Tên sách</th>";
-                                        echo "<th>Nhà xuất bản</th>";
-                                        echo "<th>Nổi bật</th>";
-                                        echo "<th>Đơn giá</th>";
-                                        echo "<th>Trạng thái</th>";
-                                        echo "<th>Chức năng</th>";
+                                        echo "<th>Mã nhân viên</th>";
+                                        echo "<th>Họ tên nhân viên</th>";
+                                        echo "<th>Email</th>";
+                                        echo "<th>Số điện thoại</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = $result->fetch_array()){
                                     echo "<tr>";
-                                        echo "<td>" . $row['HinhAnh'] . "</td>";
-                                        echo "<td>" . $row['TenSach'] . "</td>";
-                                        echo "<td>" . $row['TenNXB'] . "</td>";
-                                        echo "<td>" . $row['NoiBat'] . "</td>";
-                                        echo "<td>" . $row['DonGia'] . "</td>";
+                                        echo "<td>" . $row['MaNV'] . "</td>";
+                                        echo "<td>" . $row['HoTen'] . "</td>";
+                                        echo "<td>" . $row['Email'] . "</td>";
+                                        echo "<td>" . $row['SDT'] . "</td>";
                                         echo "<td>" . $row['TrangThai'] . "</td>";
                                         echo "<td>";
                                             echo '<a href="read.php" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
