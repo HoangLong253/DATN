@@ -134,6 +134,8 @@ create table HoaDonNhap
 
 go
 
+/*có thể thêm trường macthdn bên mysql*/
+
 create table CTHoaDonNhap
 (
 	MaHDNhap varchar(5),
@@ -146,6 +148,7 @@ go
 
 create table Kho 
 (
+	/*xem xét về việc có thêm bảng danh sách kho và chi tiết kho*/
 	MaKho varchar(5),
 	MaHDNhap varchar(5),
 	MaSach varchar(20),

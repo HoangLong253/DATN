@@ -409,7 +409,7 @@ values('HDB02', 'nv61', 1, 6000);
 
 insert into
 CTHoaDonBan(MaHDBan, MaSach, Sluong, GiaTien)
-values('HDB01', 'nv61', 5, 6000);
+values('HDB01', 'nv62', 5, 6000);
 
 insert into
 Kho(MaKho, MaHDNhap, MaSach, Sluong, create_at)
