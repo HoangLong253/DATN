@@ -117,13 +117,13 @@
         </div>
         <!-- Containter -->
         <div class="container">
-        <a href="book.php">
+        <a href="books.php">
                         Sách
                     </a>
-                    <a href="employee.php">
+                    <a href="employees.php">
                         Nhân Viên
                     </a>
-                    <a href="book.php">
+                    <a href="books.php">
                         Người dùng
                     </a>
         </div>
