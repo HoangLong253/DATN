@@ -104,15 +104,7 @@
                         <img class="header__main-logo-img " src="./assets/images/logo.png" alt="">
                     </div>
                     <div class="header__main-cpnname">
-                    <a href="book.php">
-                        Sách
-                    </a>
-                    <a href="employee.php">
-                        Nhân Viên
-                    </a>
-                    <a href="book.php">
-                        Người dùng
-                    </a>
+
                     </div>
                     <div class="header__main-search">
                         
@@ -125,7 +117,15 @@
         </div>
         <!-- Containter -->
         <div class="container">
-            
+        <a href="book.php">
+                        Sách
+                    </a>
+                    <a href="employee.php">
+                        Nhân Viên
+                    </a>
+                    <a href="book.php">
+                        Người dùng
+                    </a>
         </div>
         <!-- Fopoter -->
         <div class="footer">
