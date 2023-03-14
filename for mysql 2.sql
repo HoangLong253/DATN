@@ -22,7 +22,7 @@ create table Sach
 	MaNXB varchar(15),
 	MaLoaiSach varchar(2),
 	MaGiamGia varchar(10),
-	TenSach varchar(50),
+	TenSach varchar(255),
 	MoTa varchar(255),
 	HinhAnh varchar(255),
 	DonGia int,
