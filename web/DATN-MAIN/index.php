@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.3.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js">
+
+
 
 </head>
 <!-- Body -->
@@ -117,8 +121,8 @@
                     </div>
                 </div> -->
                 <!-- Header with search -->
-                <div class="header-with-search">
-                    <div class="header__logo">
+                <div class="header-with-search ">
+                    <div class="header__logo d-flex ">
                         <img class="header__logo-img " src="./assets/images/logo.png" alt="">
                         <div class="header__cpnname">Delicate Dragon BookStore
                         </div>
@@ -147,15 +151,189 @@
                     <!-- FadeIn chưa chuẩn -->
                     <div class="header__cart">
                         <div class="header__cart-wrap"><i class="header__cart-icon fa-solid fa-cart-shopping"></i>
-                            <div class="header__cart-list header__cart-list--no-cart">
+                            <span class="header__cart-notice">
+                                3
+                            </span>
+                            <!-- No cart: header__cart-list-no-cart-->
+                            <div class="header__cart-list ">
                                 <img src="./assets/images/no-cart.png" alt="" class="header__cart-no-cart-img">
-                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm 111</span>
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <!-- Cart item -->
+                                    <!-- Tạm ngưng cart -->
+                                    <li class="header__cart-item">
+                                        <img src="" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info -wrap">
+                                            <div class="header__cart-item-info-head">
+                                                <div class="header__cart-item-name">Thương nhớ Trà Long</div>
+                                                <span class="header__cart-item-price">100.000vnd</span>
+                                                <span class="header__cart-item-x">x</span>
+                                                <span class="header__cart-item-qnt">2</span>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-desc">Loại sản phẩm: Tiểu thuyết</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="btn btn-primary">Xem Giỏ Hàng</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- menu  -->
+        <div class="wrap-menu">
+            <div class="wrap-content">
+                <ul class="d-flex justify-content-between align-items-center">
+                    <li><a href="" class="active">Trang chủ</a></li>
+                    <li class="line"></li>
+                    <li><a href="">Giới Thiệu</a></li>
+                    <li class="line"></li>
+                    <li><a href="">Danh Mục</a></li>
+                    <li class="line"></li>
+                    <li><a href="">Tin Tức</a></li>
+                    <li class="line"></li>
+                    <li><a href="">Dịch Vụ</a></li>
+                    <li class="line"></li>
+                    <li><a href="">Tiêu Chí</a></li>
+                    <li class="line"></li>
+                    <li><a href="">Liên hệ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrap-slideshow">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <h4>1</h4>
+                </div>
+                <div class="item">
+                    <h4>2</h4>
+                </div>
+                <div class="item">
+                    <h4>3</h4>
+                </div>
+                <div class="item">
+                    <h4>4</h4>
+                </div>
+                <div class="item">
+                    <h4>5</h4>
+                </div>
+                <div class="item">
+                    <h4>6</h4>
+                </div>
+                <div class="item">
+                    <h4>7</h4>
+                </div>
+                <div class="item">
+                    <h4>8</h4>
+                </div>
+                <div class="item">
+                    <h4>9</h4>
+                </div>
+                <div class="item">
+                    <h4>10</h4>
+                </div>
+                <div class="item">
+                    <h4>11</h4>
+                </div>
+                <div class="item">
+                    <h4>12</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sản phẩm -->
+
+        <!--  <div class="wrap-product padding50"> -->
+        <!-- <div class="wrap-content">
+            <div class="product-list">
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="" class="box-product">
+                        <div class="image-product"></div>
+                        <div class="infor-product">
+                            <div class="name-product">Thương nhớ Trà Long</div>
+                            <div class="price-product"> 100.000 vnd</div>
+                        </div>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div> -->
+
         <!-- Containter -->
         <!-- <div class="container">
             <a href="books.php">
@@ -173,6 +351,25 @@
 
         </div>
     </div>
+
+    <script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+    </script>
 </body>
 
 </html>
