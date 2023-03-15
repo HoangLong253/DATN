@@ -99,11 +99,7 @@
                         <li class="header__navbar-item header__navbar-item-bold">Đăng Nhập</li>
                     </ul>
                 </div>
-<<<<<<< HEAD:DATN-MAIN/index.php
-                <!-- <div class="header__main">
-=======
                 <!--<div class="header__main">
->>>>>>> origin/main:web/DATN-MAIN/index.php
                     <div class="header__main-logo">
                         <img class="header__main-logo-img " src="./assets/images/logo.png" alt="">
                     </div>
@@ -145,10 +141,6 @@
                         </div>
                         <button class="header__search-btn">
                             <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
-<<<<<<< HEAD:DATN-MAIN/index.php
-
-=======
->>>>>>> origin/main:web/DATN-MAIN/index.php
                         </button>
                     </div>
                     <!-- Cart -->
@@ -166,9 +158,6 @@
         </div>
         <!-- Containter -->
         <div class="container">
-<<<<<<< HEAD:DATN-MAIN/index.php
-
-=======
         <a href="books.php">
             Sách
         </a>
@@ -178,7 +167,6 @@
         <a href="users.php">
             Người dùng
         </a>
->>>>>>> origin/main:web/DATN-MAIN/index.php
         </div>
         <!-- Footer -->
         <div class="footer">
