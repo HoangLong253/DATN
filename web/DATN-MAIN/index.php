@@ -15,8 +15,9 @@
     <link rel="stylesheet" href="./assets/css/fonts.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.3.0-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js">
-
+    <link rel="stylesheet" href="./assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+    <script src="./assets/OwlCarousel2-2.3.4/docs/assets/vendors/jquery.min.js"></script>
+    <script src="./assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
 
 </head>
@@ -209,130 +210,101 @@
         </div>
 
         <div class="wrap-slideshow">
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <h4>1</h4>
+            <div class="owl-carousel owlCarousel">
+                <div></div>
+                <div>
+
+                
                 </div>
-                <div class="item">
-                    <h4>2</h4>
-                </div>
-                <div class="item">
-                    <h4>3</h4>
-                </div>
-                <div class="item">
-                    <h4>4</h4>
-                </div>
-                <div class="item">
-                    <h4>5</h4>
-                </div>
-                <div class="item">
-                    <h4>6</h4>
-                </div>
-                <div class="item">
-                    <h4>7</h4>
-                </div>
-                <div class="item">
-                    <h4>8</h4>
-                </div>
-                <div class="item">
-                    <h4>9</h4>
-                </div>
-                <div class="item">
-                    <h4>10</h4>
-                </div>
-                <div class="item">
-                    <h4>11</h4>
-                </div>
-                <div class="item">
-                    <h4>12</h4>
-                </div>
+                <div></div>
+                <div></div>
             </div>
         </div>
 
         <!-- Sản phẩm -->
 
-        <!--  <div class="wrap-product padding50"> -->
-        <!-- <div class="wrap-content">
-            <div class="product-list">
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
-                </div>
+        <!-- <div class="wrap-product padding50">
+            <div class="wrap-content">
+                <div class="product-list">
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
-                </div>
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
-                </div>
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
 
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="product">
+                        <a href="" class="box-product">
+                            <div class="image-product"></div>
+                            <div class="infor-product">
+                                <div class="name-product">Thương nhớ Trà Long</div>
+                                <div class="price-product"> 100.000 vnd</div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="product">
-                    <a href="" class="box-product">
-                        <div class="image-product"></div>
-                        <div class="infor-product">
-                            <div class="name-product">Thương nhớ Trà Long</div>
-                            <div class="price-product"> 100.000 vnd</div>
-                        </div>
-                    </a>
-                </div>
-                
             </div>
-        </div>
-    </div> -->
+        </div> -->
 
         <!-- Containter -->
         <!-- <div class="container">
@@ -352,24 +324,18 @@
         </div>
     </div>
 
-    <script>
-    $('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:true,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:3
-        },
-        1000:{
-            items:5
-        }
-    }
-})
-    </script>
 </body>
+<script>
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+        }
+    })
+</script>
 
 </html>
