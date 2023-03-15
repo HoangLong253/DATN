@@ -157,17 +157,17 @@
             </div>
         </div>
         <!-- Containter -->
-        <div class="container">
-        <a href="books.php">
-            Sách
-        </a>
-        <a href="employees.php">
-            Nhân Viên
-        </a>
-        <a href="users.php">
-            Người dùng
-        </a>
-        </div>
+        <!-- <div class="container">
+            <a href="books.php">
+                Sách
+            </a>
+            <a href="employees.php">
+                Nhân Viên
+            </a>
+            <a href="users.php">
+                Người dùng
+            </a>
+        </div> -->
         <!-- Footer -->
         <div class="footer">
 
