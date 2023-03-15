@@ -211,13 +211,11 @@
 
         <div class="wrap-slideshow">
             <div class="owl-carousel owlCarousel">
-                <div></div>
-                <div>
-
+                <div><img src="./assets/images/slide.png" alt=""></div>
+                <div><img src="./assets/images/banner_02.png" alt=""></div>
+                <div><img src="./assets/images/slide1.png" alt=""></div>
+                <div><img src="./assets/images/slideshow_02.png" alt=""></div>
                 
-                </div>
-                <div></div>
-                <div></div>
             </div>
         </div>
 
