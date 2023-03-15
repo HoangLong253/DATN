@@ -99,18 +99,59 @@
                         <li class="header__navbar-item header__navbar-item-bold">Đăng Nhập</li>
                     </ul>
                 </div>
-                <div class="header__main">
+                <!--<div class="header__main">
                     <div class="header__main-logo">
                         <img class="header__main-logo-img " src="./assets/images/logo.png" alt="">
                     </div>
+
                     <div class="header__main-cpnname">
 
                     </div>
+
                     <div class="header__main-search">
                         
                     </div>
+
                     <div class="header__main-cart">
 
+                    </div>
+                </div> -->
+                <!-- Header with search -->
+                <div class="header-with-search">
+                    <div class="header__logo">
+                        <img class="header__logo-img " src="./assets/images/logo.png" alt="">
+                        <div class="header__cpnname">Delicate Dragon BookStore
+                        </div>
+                    </div>
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Nhập từ khóa để tìm kiếm">
+                            <!-- Search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-items">
+                                        <a href="">Thương nhớ Trà Long</a>
+                                    </li>
+                                    <li class="header__search-history-items">
+                                        <a href="">Cô gái đến từ hôm qua</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <!-- Cart -->
+                    <!-- FadeIn chưa chuẩn -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap"><i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            <div class="header__cart-list header__cart-list--no-cart">
+                                <img src="./assets/images/no-cart.png" alt="" class="header__cart-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -127,7 +168,7 @@
             Người dùng
         </a>
         </div>
-        <!-- Fopoter -->
+        <!-- Footer -->
         <div class="footer">
 
         </div>

@@ -47,6 +47,8 @@
                                         echo "<th>Họ tên nhân viên</th>";
                                         echo "<th>Email</th>";
                                         echo "<th>Số điện thoại</th>";
+                                        echo "<th>Trạng thái</th>";
+                                        echo "<th>Chức năng</th>";
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
