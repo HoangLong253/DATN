@@ -149,7 +149,7 @@
                         <div class="header__cart-wrap"><i class="header__cart-icon fa-solid fa-cart-shopping"></i>
                             <div class="header__cart-list header__cart-list--no-cart">
                                 <img src="./assets/images/no-cart.png" alt="" class="header__cart-no-cart-img">
-                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm 111</span>
                             </div>
                         </div>
                     </div>
