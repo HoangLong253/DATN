@@ -164,6 +164,7 @@
                                 <ul class="header__cart-list-item">
                                     <!-- Cart item -->
                                     <!-- Tạm ngưng cart -->
+                                    <!-- Lỗi : thừa 1 dấu chấm -->
                                     <li class="header__cart-item">
                                         <img src="" alt="" class="header__cart-img">
                                         <div class="header__cart-item-info -wrap">
