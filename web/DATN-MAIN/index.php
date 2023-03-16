@@ -163,26 +163,59 @@
                                 <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
                                 <ul class="header__cart-list-item">
                                     <!-- Cart item -->
-                                    <!-- Tạm ngưng cart -->
-                                    <!-- Lỗi : thừa 1 dấu chấm -->
                                     <li class="header__cart-item">
-                                        <img src="" alt="" class="header__cart-img">
+                                        <img src="https://salt.tikicdn.com/cache/100x100/ts/review/9e/80/22/ff1656d3fbc597360c5cce278d4b838c.jpg.webp" alt="" class="header__cart-img">
                                         <div class="header__cart-item-info -wrap">
-                                            <div class="header__cart-item-info-head">
+                                            <div class="header__cart-item-head">
                                                 <div class="header__cart-item-name">Thương nhớ Trà Long</div>
+                                                <div class="header__cart-item-price-wrap">
                                                 <span class="header__cart-item-price">100.000vnd</span>
                                                 <span class="header__cart-item-x">x</span>
                                                 <span class="header__cart-item-qnt">2</span>
+                                                </div>
                                             </div>
                                             <div class="header__cart-item-body">
                                                 <span class="header__cart-item-desc">Loại sản phẩm: Tiểu thuyết</span>
                                                 <span class="header__cart-item-remove">Xóa</span>
-
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://salt.tikicdn.com/cache/100x100/ts/review/9e/80/22/ff1656d3fbc597360c5cce278d4b838c.jpg.webp" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info -wrap">
+                                            <div class="header__cart-item-head">
+                                                <div class="header__cart-item-name">Thương nhớ Trà Long</div>
+                                                <div class="header__cart-item-price-wrap">
+                                                <span class="header__cart-item-price">100.000vnd</span>
+                                                <span class="header__cart-item-x">x</span>
+                                                <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-desc">Loại sản phẩm: Tiểu thuyết</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="header__cart-item">
+                                        <img src="https://salt.tikicdn.com/cache/100x100/ts/review/9e/80/22/ff1656d3fbc597360c5cce278d4b838c.jpg.webp" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info -wrap">
+                                            <div class="header__cart-item-head">
+                                                <div class="header__cart-item-name">Thương nhớ Trà Long</div>
+                                                <div class="header__cart-item-price-wrap">
+                                                <span class="header__cart-item-price">100.000vnd</span>
+                                                <span class="header__cart-item-x">x</span>
+                                                <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-desc">Loại sản phẩm: Tiểu thuyết</span>
+                                                <span class="header__cart-item-remove">Xóa</span>
                                             </div>
                                         </div>
                                     </li>
                                 </ul>
-                                <button class="btn btn-primary">Xem Giỏ Hàng</button>
+                                <a href="#" class="header__cart-view-cart btn btn-primary">Xem Giỏ Hàng</a>
                             </div>
                         </div>
                     </div>
