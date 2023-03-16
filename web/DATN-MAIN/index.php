@@ -215,7 +215,7 @@
                 <div><img src="./assets/images/banner_02.png" alt=""></div>
                 <div><img src="./assets/images/slide1.png" alt=""></div>
                 <div><img src="./assets/images/slideshow_02.png" alt=""></div>
-                
+
             </div>
         </div>
 
@@ -324,16 +324,16 @@
 
 </body>
 <script>
-    $('.owl-carousel').owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-        }
-    })
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: true,
+    responsive: {
+        0: {
+            items: 1
+        },
+    }
+})
 </script>
 
 </html>
