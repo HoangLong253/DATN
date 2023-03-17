@@ -1,3 +1,7 @@
+<?php
+    require_once "config.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- Head -->
@@ -258,6 +262,55 @@
         <!-- <div class="wrap-product padding50">
             <div class="wrap-content">
                 <div class="product-list">
+                    <?php
+                        
+                    ?>
+
+                </div>
+            </div>
+        </div> -->
+
+        <div class="wrap-product padding50">
+            <div class="wrap-content">
+                <div class="product-list">
+                    <?php
+                        // Include config file
+
+                        $sql = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK'";
+
+                        if($result = $mysqli->query($sql)){
+                            if($result->field_count > 0){
+                                while($row = $result->fetch_array()){
+                                    ?>
+                                    <div class="product">
+                                        <a href="#" class="box-product">
+                                            <div class="">
+                                                <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="200" height="300"></img>
+                                            </div>
+                                            <div class="infor-product">
+                                                <?php
+                                                    echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                                    echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
+                                                ?>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <?php
+                                }
+                            } else{
+                                echo '<div class="alert alert-danger"><em>Không có dữ liệu sách.</em></div>';
+                            }
+                        } else{
+                            echo "Oops! Đã xảy ra lỗi, Vui lòng thử lại lần sau.";
+                        }
+                    ?>
+                </div>   
+            </div>
+        </div>
+
+        <!--<div class="wrap-product padding50">
+            <div class="wrap-content">
+                <div class="product-list">
                     <div class="product">
                         <a href="" class="box-product">
                             <div class="image-product"></div>
@@ -336,20 +389,7 @@
 
                 </div>
             </div>
-        </div> -->
-
-        <!-- Containter -->
-        <!-- <div class="container">
-            <a href="books.php">
-                Sách
-            </a>
-            <a href="employees.php">
-                Nhân Viên
-            </a>
-            <a href="users.php">
-                Người dùng
-            </a>
-        </div> -->
+        </div>-->
         <!-- Footer -->
         <div class="footer">
 

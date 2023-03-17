@@ -42,10 +42,16 @@
                         </li>
                     </ul>
 
-
-
                     <!-- Đăng xuất -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item d-sm-inline-block">
+                            <a href="../" target="_blank" class="nav-link"><i class="fas fa-reply"></i></a>
+                        </li>
+                        <li class="nav-item d-sm-inline-block">
+                            <a id="dropdownSubMenu-info" href="#" class="nav-link dropdown-toggle">
+                                <i class="fas fa-cogs"></i>
+                            </a>
+                        </li>
                         <li class="nav-item d-sm-inline-block">
                             <a href="" class="nav-link">
                                 <i class="fas fa-sign-out-alt mr-1"></i>
