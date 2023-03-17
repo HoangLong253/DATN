@@ -1,5 +1,6 @@
 :root{--white-color:#fff;--black-color:#000;--text-color:#333;--primary-color:#ff0000;--border-color:#dbdbdb;--header-height:120px;--navbar-height:34px;--header-with-search:calc(var(--header-height)- var(--navbar-height));}
 *{box-sizing:inherit;}
+.containerr{overflow: hidden; position: relative;background-color: #fff;min-width: 1200px}
 html{font-size:16px;line-height:20px;font-family:'MuliRegular',sans-serif;box-sizing:border-box;}
 .wrap-content{width:1200px;max-width:100%;margin:0 auto;}
 .wrap-content-width{width:100%;}

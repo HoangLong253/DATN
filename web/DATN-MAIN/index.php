@@ -9,7 +9,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1366">
+
     <title>BookStore</title>
     <link rel="stylesheet" href="./assets/font/..">
     <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/..">
@@ -28,6 +29,7 @@
 <!-- Body -->
 
 <body>
+    <div class="containerr">
     <div class="main">
         <!-- Header -->
         <div class="header">
@@ -56,7 +58,8 @@
                                 <i class="header__navbar-icon fa-solid fa-bell"></i>
                                 Thông Báo
                             </a>
-                            <!--<div class="header__notify">
+                            <!-- Click vào chuông hiện thông báo -->
+                            <div class="header__notify">
                                 <header class="header__notify-header">
                                     <h3>Thông báo mới nhận</h3>
                                 </header>
@@ -95,7 +98,8 @@
                                 <div class="header__notify-footer">
                                     <a href="" class="header__notify-footer-btn">Xem tất cả</a>
                                 </div>
-                            </div>-->
+                            </div>
+                            
                         </li>
                         <li class="header__navbar-item">
                             <a href="" class="header__navbar-item-link">
@@ -108,23 +112,7 @@
                         <li class="header__navbar-item header__navbar-item-bold">Đăng Nhập</li>
                     </ul>
                 </div>
-                <!--<div class="header__main">
-                    <div class="header__main-logo">
-                        <img class="header__main-logo-img " src="./assets/images/logo.png" alt="">
-                    </div>
-
-                    <div class="header__main-cpnname">
-
-                    </div>
-
-                    <div class="header__main-search">
-                        
-                    </div>
-
-                    <div class="header__main-cart">
-
-                    </div>
-                </div> -->
+                
                 <!-- Header with search -->
                 <div class="header-with-search ">
                     <div class="header__logo d-flex ">
@@ -226,7 +214,8 @@
                 </div>
             </div>
         </div>
-        <!-- menu  -->
+        
+        <!-- Menu  -->
         <div class="wrap-menu">
             <div class="wrap-content">
                 <ul class="d-flex justify-content-between align-items-center">
@@ -246,7 +235,7 @@
                 </ul>
             </div>
         </div>
-
+        <!-- Slideshow -->
         <div class="wrap-slideshow">
             <div class="owl-carousel owlCarousel">
                 <div><img src="./assets/images/slide.png" alt=""></div>
@@ -256,20 +245,26 @@
 
             </div>
         </div>
+        <!-- Đối tác nhà xuất bản -->
+        <div class="wrap-slideshow">
+            <div class="owl-carousel owlCarousel">
+            <div><img src="./assets/images/doi-tac/brand-1-5394-2516.jpg" alt=""></div>
+                    <div><img src="./assets/images/doi-tac/brand-2-9477-7504.jpg" alt=""></div>
+                    <div><img src="./assets/images/doi-tac/brand-3-1828-5079.jpg" alt=""></div>
+                    <div><img src="./assets/images/doi-tac/brand-4-3020-1744.jpg" alt=""></div>
+                    <div><img src="./assets/images/doi-tac/brand-5-3471-2234.jpg" alt=""></div>
+                    <div><img src="./assets/images/doi-tac/brand-6-8551-1039.jpg" alt=""></div>
+                    <div><img src="./assets/images/doi-tac/brand-7-2941-8624.jpg" alt=""></div>
+
+            </div>
+        </div>
+
+        
+        <!--  -->
+
+
 
         <!-- Sản phẩm -->
-
-        <!-- <div class="wrap-product padding50">
-            <div class="wrap-content">
-                <div class="product-list">
-                    <?php
-                        
-                    ?>
-
-                </div>
-            </div>
-        </div> -->
-
         <div class="wrap-product padding50">
             <div class="wrap-content">
                 <div class="product-list">
@@ -314,19 +309,30 @@
 
         </div>
     </div>
-
+</div>
 </body>
 <script>
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 10,
-    nav: true,
+    nav: false,
     responsive: {
         0: {
             items: 1
         },
     }
 })
+$('.owl-carousel1').owlCarousel1({
+    loop: true,
+    margin: 10,
+    nav: false,
+    responsive: {
+        0: {
+            items: 1
+        },
+    }
+})
+
 </script>
 
 </html>
