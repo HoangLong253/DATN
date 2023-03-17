@@ -21,7 +21,7 @@ create table Sach
 	MaSach varchar(20),
 	MaNXB varchar(15),
 	MaLoaiSach varchar(2),
-	MaGiamGia varchar(10),
+	PhanTramGiam float,
 	TenSach varchar(255),
 	MoTa varchar(255),
 	HinhAnh varchar(255),
@@ -180,11 +180,6 @@ alter table Sach
 add constraint FK_Sach_NhaXuatBan
 foreign key (MaNXB)
 references NhaXuatBan(MaNXB);
-
-alter table Sach
-add constraint FK_Sach_GiamGia
-foreign key (MaGiamGia)
-references GiamGia(MaGiamGia);
 
 alter table CTHoaDonBan
 add constraint FK_CTHoaDonBan_HoaDonBan

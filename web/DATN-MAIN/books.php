@@ -10,11 +10,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 1000px;
+            width: 1240px;
             margin: 0 auto;
         }
         table tr td:last-child{
-            width: 200px;
+            width: 250px;
         }
     </style>
     <script>
@@ -37,7 +37,7 @@
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM Sach s join NhaXuatBan nxb on s.MaNXB = nxb.MaNXB";
+                    $sql = "SELECT *, DonGia - (DonGia * PhanTramGiam) as 'GiaGiam' FROM Sach s join NhaXuatBan nxb on s.MaNXB = nxb.MaNXB";
                     if($result = $mysqli->query($sql)){
                         if($result->num_rows > 0){
                             echo '<table class="table table-bordered table-striped">';
@@ -48,6 +48,7 @@
                                         echo "<th>Nhà xuất bản</th>";
                                         echo "<th>Nổi bật</th>";
                                         echo "<th>Đơn giá</th>";
+                                        echo "<th>Giá giảm</th>";
                                         echo "<th>Trạng thái</th>";
                                         echo "<th>Chức năng</th>";
                                     echo "</tr>";
@@ -58,9 +59,20 @@
                                         echo "<td>" . $row['HinhAnh'] . "</td>";
                                         echo "<td>" . $row['TenSach'] . "</td>";
                                         echo "<td>" . $row['TenNXB'] . "</td>";
-                                        echo "<td>" . $row['NoiBat'] . "</td>";
-                                        echo "<td>" . $row['DonGia'] . "</td>";
-                                        echo "<td>" . $row['TrangThai'] . "</td>";
+                                        //echo "<td>" . $row['NoiBat'] . "</td>";
+                                        ?>
+                                        <td>
+                                            <input type="checkbox" id="NoiBat" name="NoiBat" value="yes" <?php if($row['NoiBat']) echo "checked" ?> onclick="return false;"/>
+                                        </td>
+                                        <?php
+                                        echo "<td>" . $row['DonGia'] . "đ</td>";
+                                        echo "<td>" . $row['GiaGiam'] . "đ</td>";
+                                        //echo "<td>" . $row['TrangThai'] . "</td>";
+                                        ?>
+                                        <td>
+                                            <input type="checkbox" id="TrangThai" name="TrangThai" value="yes"<?php if($row['TrangThai']) echo "checked" ?> onclick="return false;"/>
+                                        </td>
+                                        <?php
                                         echo "<td>";
                                             echo '<a href="read.php" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                             echo '<a href="update.php" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';

@@ -145,12 +145,12 @@ sup {
   top: -0.5em;
 }
 a {
-  color: #007bff;
+  color: #ffffff;
   text-decoration: none;
   background-color: transparent;
 }
 a:hover {
-  color: #0056b3;
+  color: #999999;
   text-decoration: none;
 }
 a:not([href]) {
@@ -9509,7 +9509,7 @@ html {
   position: relative;
 }
 .wrapper .content-wrapper {
-  min-height: calc(100vh - calc(3.5rem + 1px) - calc(3.5rem + 1px));
+  min-height: calc(100vh);
 }
 .layout-boxed .wrapper {
   box-shadow: 0 0 10 rgba(0, 0, 0, 0.3);
@@ -10910,7 +10910,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini)
   body:not(.sidebar-mini-md) .main-footer,
   body:not(.sidebar-mini-md) .main-header {
     transition: margin-left 0.3s ease-in-out;
-    margin-left: 250px;
+    margin-left: 125px;
   }
 }
 @media (min-width: 768px) and (prefers-reduced-motion: reduce) {
@@ -11010,7 +11010,7 @@ body.sidebar-collapse:not(.sidebar-mini-md):not(.sidebar-mini)
   }
 }
 :not(.layout-fixed) .main-sidebar {
-  height: inherit;
+  /*height: inherit;*/
   min-height: 100%;
   position: absolute;
   top: 0;
