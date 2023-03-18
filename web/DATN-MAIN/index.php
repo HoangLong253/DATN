@@ -1,9 +1,5 @@
-<?php
-    require_once "config.php";
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vn">
 <!-- Head -->
 
 <head>
@@ -281,8 +277,40 @@
                     <div class="wrap-slide-spnb">
                         <div class="owl-spnb owl-carousel owlCarousel">
 
+                            <?php
+                                require_once "config.php";
+
+                                $sql1 = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK' AND NoiBat = 1";
+
+                                if($result1 = $mysqli->query($sql1)){
+                                    if($result1->field_count > 0){
+                                        while($row = $result1->fetch_array()){
+                                        ?>
+                                            <div class="product">
+                                                <a href="#" class="box-product">
+                                                    <div class="">
+                                                        <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="200" height="300"></img>
+                                                    </div>
+                                                    <div class="infor-product">
+                                                    <?php
+                                                        echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                                        echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
+                                                    ?>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        <?php
+                                        }
+                                    } else {
+                                        echo '<div class="alert alert-danger"><em>Không có dữ liệu sách.</em></div>';
+                                    }
+                                } else{
+                                    echo "Oops! Đã xảy ra lỗi, Vui lòng thử lại lần sau.";
+                                }
+                            ?>
+
                             <!-- Ví dụ spnb -->
-                            <div class="product">
+                            <!--<div class="product">
                                 <a href="" class="box-product">
                                     <div class="image-product"></div>
                                     <div class="infor-product">
@@ -308,7 +336,7 @@
                                         <div class="price-product"> 29.000.000 vnd</div>
                                     </div>
                                 </a>
-                            </div>
+                            </div>-->
                             <!-- end ví dụ -->
                         </div>
                     </div>
@@ -322,10 +350,11 @@
                     <div class="product-list">
                         <?php
                         // Include config file
+                        require_once "config.php";
 
-                        $sql = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK'";
+                        $sql2 = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK'";
 
-                        if($result = $mysqli->query($sql)){
+                        if($result = $mysqli->query($sql2)){
                             if($result->field_count > 0){
                                 while($row = $result->fetch_array()){
                                     ?>
@@ -337,14 +366,14 @@
                                 </div>
                                 <div class="infor-product">
                                     <?php
-                                                    echo '<div class="name-product">' . $row['TenSach'] . '</div>';
-                                                    echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
-                                                ?>
+                                        echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                        echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
+                                    ?>
                                 </div>
                             </a>
                         </div>
                         <?php
-                                }
+                            }
                             } else{
                                 echo '<div class="alert alert-danger"><em>Không có dữ liệu sách.</em></div>';
                             }

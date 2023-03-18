@@ -3,7 +3,7 @@
     src: url('../fonts/Muli-Bold.woff2') format('woff2'),
         url('../fonts/Muli-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: normal;
+    font-style: bold;
 }
 @font-face {
     font-family: 'MuliRegular';

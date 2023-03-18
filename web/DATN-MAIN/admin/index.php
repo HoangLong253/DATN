@@ -19,14 +19,15 @@
                         Trang Admin
                     </div>
                 </a>
+            <a class="nav-link" href="">
+                Trang chủ
+            </a>
             <a class="nav-link" href="books.php">
                 Sách
             </a>
-            <br>
             <a class="nav-link" href="employees.php">
                 Nhân Viên
             </a>
-            <br>
             <a class="nav-link" href="users.php">
                 Người dùng
             </a>
