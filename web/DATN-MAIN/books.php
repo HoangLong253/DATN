@@ -19,7 +19,7 @@
             margin: 0 auto;
         }
         table tr td:last-child{
-            width: 250px;
+            width: 200px;
         }
     </style>
     <script>
@@ -111,7 +111,12 @@
                                             echo "<tbody>";
                                             while($row = $result->fetch_array()){
                                                 echo "<tr>";
-                                                    echo "<td>" . $row['HinhAnh'] . "</td>";
+                                                    //echo "<td>" . $row['HinhAnh'] . "</td>";
+                                                    ?>
+                                                    <td>
+                                                        <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
+                                                    </td>
+                                                    <?php
                                                     echo "<td>" . $row['TenSach'] . "</td>";
                                                     echo "<td>" . $row['TenNXB'] . "</td>";
                                                     //echo "<td>" . $row['NoiBat'] . "</td>";
@@ -129,7 +134,6 @@
                                                 </td>
                                                 <?php
                                                 echo "<td>";
-                                                    echo '<a href="read.php" class="mr-3 func_icon !important" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                                     echo '<a href="update.php" class="mr-3 func_icon !important" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                                                     echo '<a id="del_btn" href="delete.php" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                                 echo "</td>";

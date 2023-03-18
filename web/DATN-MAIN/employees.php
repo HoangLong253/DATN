@@ -102,8 +102,10 @@
                                         echo "<th>Mã nhân viên</th>";
                                         echo "<th>Họ tên nhân viên</th>";
                                         echo "<th>Email</th>";
+                                        echo "<th>Mật khẩu</th>";
                                         echo "<th>Số điện thoại</th>";
                                         echo "<th>Trạng thái</th>";
+                                        echo "<th>Admin</th>";
                                         echo "<th>Chức năng</th>";
                                     echo "</tr>";
                                 echo "</thead>";
@@ -113,15 +115,18 @@
                                         echo "<td>" . $row['MaNV'] . "</td>";
                                         echo "<td>" . $row['HoTen'] . "</td>";
                                         echo "<td>" . $row['Email'] . "</td>";
+                                        echo "<td>" . $row['MatKhau'] . "</td>";
                                         echo "<td>" . $row['SDT'] . "</td>";
                                         /*echo "<td>" . $row['TrangThai'] . "</td>";*/
                                         ?>
                                             <td>
                                                 <input type="checkbox" id="TrangThai" name="TrangThai" value="yes"<?php if($row['TrangThai']) echo "checked" ?> onclick="return false;"/>
                                             </td>
+                                            <td>
+                                                <input type="checkbox" id="LaAdmin" name="LaAdmin" value="yes"<?php if($row['LaAdmin']) echo "checked" ?> onclick="return false;"/>
+                                            </td>
                                         <?php
                                         echo "<td>";
-                                            echo '<a href="read.php" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                             echo '<a href="update.php" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                                             echo '<a href="delete.php" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                         echo "</td>";
@@ -132,7 +137,7 @@
                             // Free result set
                             unset($result);
                         } else{
-                            echo '<div class="alert alert-danger"><em>Không có dữ liệu sách.</em></div>';
+                            echo '<div class="alert alert-danger"><em>Không có dữ liệu nhân viên.</em></div>';
                         }
                     } else{
                         echo "Oops! Đã xảy ra lỗi, Vui lòng thử lại lần sau.";

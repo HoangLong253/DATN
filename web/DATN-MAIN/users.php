@@ -121,7 +121,6 @@
                                             </td>
                                         <?php
                                         echo "<td>";
-                                            echo '<a href="read.php" class="mr-3" title="View Record" data-toggle="tooltip"><span class="fa fa-eye"></span></a>';
                                             echo '<a href="update.php" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
                                             echo '<a href="delete.php" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                         echo "</td>";
@@ -132,7 +131,7 @@
                             // Free result set
                             unset($result);
                         } else{
-                            echo '<div class="alert alert-danger"><em>Không có dữ liệu sách.</em></div>';
+                            echo '<div class="alert alert-danger"><em>Không có dữ liệu người dùng.</em></div>';
                         }
                     } else{
                         echo "Oops! Đã xảy ra lỗi, Vui lòng thử lại lần sau.";

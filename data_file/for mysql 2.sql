@@ -54,8 +54,10 @@ create table NhanVien
 	MaNV varchar(5),
 	HoTen varchar(50), 
 	Email varchar(30),
+	MatKhau varchar(12),
 	SDT varchar(10),
 	TrangThai bit,
+	LaAdmin bit,
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	updated_at datetime,
 	deleted_at datetime,
@@ -247,16 +249,16 @@ foreign key (MaGiamGia)
 references GiamGia(MaGiamGia);
 
 insert into 
-NhanVien(MaNV, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at) 
-values ('NV01', N'Nguyễn Văn A', 'NgVA@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
+NhanVien(MaNV, HoTen, Email, SDT, TrangThai, LaAdmin, created_at, updated_at, deleted_at) 
+values ('NVAn', N'Nguyễn Văn A', 'NgVA@gmail.com', '0891234567', 1, 0, CURRENT_TIMESTAMP, '', '');
 
 insert into 
 NhanVien(MaNV, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at) 
-values ('NV02', N'Lại Thị B', 'LTB@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
+values ('LTB', N'Lại Thị B', 'LTB@gmail.com', '0891234567', 1, 0, CURRENT_TIMESTAMP, '', '');
 
 insert into 
 NhanVien(MaNV, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at) 
-values ('NV03', N'Trần Kha C', 'TC@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
+values ('TKC', N'Trần Kha C', 'TC@gmail.com', '0891234567', 1, 0, CURRENT_TIMESTAMP, '', '');
 
 INSERT into
 GioHang(MaGioHang, MaNgDung, TongTien, updated_at, deleted_at)
@@ -268,7 +270,7 @@ values ('ND01', 'GIOH01', N'Hoàng C', 'NC@gmail.com', '0891234567', 1, CURRENT_
 
 insert into
 NgGiaoHang(MaNgGiaoHang, MaHDBan, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at)
-values ('GIAOH01', 'HDB01', 'Trần Thị D', 'T2D@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
+values ('TrTD', 'HDB01', 'Trần Thị D', 'T2D@gmail.com', '0891234567', 1, CURRENT_TIMESTAMP, '', '');
 
 INSERT into 
 CTGioHang(MaGioHang, MaSach, SL, GiaTien, Tong, updated_at, deleted_at)
@@ -434,15 +436,15 @@ INSERT INTO Sach VALUES('o-t12','DN','TK',NULL,N'Tổng Ôn Toán Học (Tái B�
 
 insert into
 HoaDonNhap(MaHDNhap, MaNV, TongTien, created_at)
-values('HDN01', 'NV01', 60000, CURRENT_TIMESTAMP);
+values('HDN01', 'NVAn', 60000, CURRENT_TIMESTAMP);
 
 insert into
 HoaDonBan(MaHDBan, MaNV, MaNgDung, MaNgGiaoHang, TongTien, created_at)
-values('HDB01', 'NV03', 'ND01', 'GIAOH01',60000, CURRENT_TIMESTAMP);
+values('HDB01', 'LTB', 'ND01', 'GIAOH01',60000, CURRENT_TIMESTAMP);
 
 insert into
 HoaDonBan(MaHDBan, MaNV, MaNgDung, MaNgGiaoHang, TongTien, created_at)
-values('HDB02', 'NV02', 'ND01', 'GIAOH01',0, CURRENT_TIMESTAMP);
+values('HDB02', 'TKC', 'ND01', 'GIAOH01',0, CURRENT_TIMESTAMP);
 
 insert into
 CTHoaDonNhap(MaHDNhap, MaSach, Sluong)
