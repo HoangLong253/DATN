@@ -214,6 +214,8 @@ to{opacity:1;transform:scale(1);}
 
 
 
+
+
 /* Responsive */
 @media only screen and (max-width:1000px){.wrap-content{padding:0px 15px;}
 .header .wrap-content{flex-wrap:wrap;justify-content:center;}

@@ -19,16 +19,16 @@
                         Trang Admin
                     </div>
                 </a>
-            <a class="nav-link" href="">
+            <a class="nav-link nav_btn_admin" href="">
                 Trang chủ
             </a>
-            <a class="nav-link" href="books.php">
+            <a class="nav-link nav_btn_admin" href="books.php">
                 Sách
             </a>
-            <a class="nav-link" href="employees.php">
+            <a class="nav-link nav_btn_admin" href="employees.php">
                 Nhân Viên
             </a>
-            <a class="nav-link" href="users.php">
+            <a class="nav-link nav_btn_admin" href="users.php">
                 Người dùng
             </a>
             </aside>
@@ -62,6 +62,7 @@
                     </ul>
 
                 </nav>
+
             </div>
         </div>
     </body>

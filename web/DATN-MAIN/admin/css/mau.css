@@ -144,11 +144,11 @@ sub {
 sup {
   top: -0.5em;
 }
-a {
+/*a {
   color: #ffffff;
   text-decoration: none;
   background-color: transparent;
-}
+}*/
 a:hover {
   color: #999999;
   text-decoration: none;
@@ -2398,7 +2398,7 @@ textarea.form-control.is-invalid {
   }
 }
 .btn {
-  display: inline-block;
+  display: flex;
   font-weight: 400;
   color: black/*#56799c*/;
   text-align: center;
@@ -7609,7 +7609,7 @@ button.bg-dark:hover {
 }
 .mt-5,
 .my-5 {
-  margin-top: 3rem !important;
+  margin-top: 1rem !important;
 }
 .mr-5,
 .mx-5 {
@@ -31346,4 +31346,21 @@ a.text-muted:hover {
 }
 [class*="accent-"] a.btn-dark {
   color: #fff;
+}
+.func_icon {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.nav_btn_admin {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+#del_btn:hover {
+  color: #ff0000;
+  text-decoration: none;
+  background-color: transparent;
 }
