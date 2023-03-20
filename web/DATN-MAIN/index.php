@@ -288,7 +288,7 @@
                                         ?>
                                             <div class="product">
                                                 <a href="#" class="box-product">
-                                                    <div class="">
+                                                    <div class="images-product scale-img">
                                                         <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="200" height="300"></img>
                                                     </div>
                                                     <div class="infor-product">
@@ -308,6 +308,9 @@
                                     echo "Oops! Đã xảy ra lỗi, Vui lòng thử lại lần sau.";
                                 }
                             ?>
+
+
+                            
 
                             <!-- Ví dụ spnb -->
                             <!--<div class="product">
@@ -358,9 +361,9 @@
                             if($result->field_count > 0){
                                 while($row = $result->fetch_array()){
                                     ?>
-                        <div class="product">
+                        <div class="product ">
                             <a href="#" class="box-product">
-                                <div class="">
+                                <div class="image-product scale-img">
                                     <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>'
                                         width="200" height="300"></img>
                                 </div>
@@ -384,7 +387,7 @@
                     </div>
                 </div>
             </div>
-
+                            
 
             <!-- Footer -->
             <div class="footer">

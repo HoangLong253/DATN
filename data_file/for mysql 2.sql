@@ -253,11 +253,11 @@ NhanVien(MaNV, HoTen, Email, SDT, TrangThai, LaAdmin, created_at, updated_at, de
 values ('NVAn', N'Nguyễn Văn A', 'NgVA@gmail.com', '0891234567', 1, 0, CURRENT_TIMESTAMP, '', '');
 
 insert into 
-NhanVien(MaNV, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at) 
+NhanVien(MaNV, HoTen, Email, SDT, TrangThai, LaAdmin, created_at, updated_at, deleted_at) 
 values ('LTB', N'Lại Thị B', 'LTB@gmail.com', '0891234567', 1, 0, CURRENT_TIMESTAMP, '', '');
 
 insert into 
-NhanVien(MaNV, HoTen, Email, SDT, TrangThai, created_at, updated_at, deleted_at) 
+NhanVien(MaNV, HoTen, Email, SDT, TrangThai, LaAdmin, created_at, updated_at, deleted_at) 
 values ('TKC', N'Trần Kha C', 'TC@gmail.com', '0891234567', 1, 0, CURRENT_TIMESTAMP, '', '');
 
 INSERT into
@@ -440,11 +440,11 @@ values('HDN01', 'NVAn', 60000, CURRENT_TIMESTAMP);
 
 insert into
 HoaDonBan(MaHDBan, MaNV, MaNgDung, MaNgGiaoHang, TongTien, created_at)
-values('HDB01', 'LTB', 'ND01', 'GIAOH01',60000, CURRENT_TIMESTAMP);
+values('HDB01', 'LTB', 'ND01', 'TrTD',60000, CURRENT_TIMESTAMP);
 
 insert into
 HoaDonBan(MaHDBan, MaNV, MaNgDung, MaNgGiaoHang, TongTien, created_at)
-values('HDB02', 'TKC', 'ND01', 'GIAOH01',0, CURRENT_TIMESTAMP);
+values('HDB02', 'TKC', 'ND01', 'TrTD',0, CURRENT_TIMESTAMP);
 
 insert into
 CTHoaDonNhap(MaHDNhap, MaSach, Sluong)

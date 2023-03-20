@@ -12,6 +12,10 @@ html{font-size:16px;line-height:20px;font-family:'MuliRegular',sans-serif;box-si
 paddingtop50{padding-top: 50px;}
 paddingbottom50{padding-bottom: 50px;}
 .padding50{padding: 50px 0;}
+/* Scale IMG */
+.scale-img{overflow:hidden;display:block;}
+.scale-img img{-webkit-transition:0.3s ease-out;-moz-transition:0.3s ease-out;-o-transition:0.3s ease-out;transition:0.3s ease-out;-moz-transform:scale(1,1);-webkit-transform:scale(1,1);-o-transform:scale(1,1);-ms-transform:scale(1,1);transform:scale(1,1);}
+.scale-img:hover>img{-webkit-transition:0.3s ease-out;-moz-transition:0.3s ease-out;-o-transition:0.3s ease-out;transition:0.3s ease-out;-moz-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);-o-transform:scale(1.1,1.1);-ms-transform:scale(1.1,1.1);transform:scale(1.1,1.1);}
 /* Animation */
 @keyframes fadeIn{form{opacity:0;}
 to{opacity:1;}
