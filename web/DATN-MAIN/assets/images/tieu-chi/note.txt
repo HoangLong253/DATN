@@ -1,0 +1,1 @@
+tiêu chí chỉ hiện hover có hiệu ứng ko vào trang trong
