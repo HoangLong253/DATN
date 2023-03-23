@@ -116,7 +116,7 @@
                     <!-- Header with search -->
                     <div class="header-with-search ">
                         <div class="header__logo d-flex ">
-                            <img class="header__logo-img " src="./assets/images/logo.png" alt="">
+                            <img class="header__logo-img " src="./assets/images/logo/logo.png" alt="">
                             <div class="header__cpnname">Delicate Dragon BookStore
                             </div>
                         </div>
@@ -244,10 +244,10 @@
             <!-- Slideshow -->
             <div class="wrap-slideshow">
                 <div class="owl-slideshow owl-carousel owlCarousel">
-                    <div><img src="./assets/images/slide.png" alt=""></div>
-                    <div><img src="./assets/images/banner_02.png" alt=""></div>
-                    <div><img src="./assets/images/slide1.png" alt=""></div>
-                    <div><img src="./assets/images/slideshow_02.png" alt=""></div>
+                    <div><img src="./assets/images/slideshow/slide.png" alt=""></div>
+                    <div><img src="./assets/images/slideshow/banner_02.png" alt=""></div>
+                    <div><img src="./assets/images/slideshow/slide1.png" alt=""></div>
+                    <div><img src="./assets/images/slideshow/slideshow_02.png" alt=""></div>
 
                 </div>
             </div>
