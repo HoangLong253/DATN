@@ -5,11 +5,11 @@
     <title>Sách</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="admin\css\base.css">
-    <link rel="stylesheet" href="admin\css\fonts.css">
-    <link rel="stylesheet" href="admin\css\mau.css">
-    <link rel="stylesheet" href="assets\fontawesome-free-6.3.0-web\css\all.css">
-    <link rel="stylesheet" href="assets\fontawesome-free-6.3.0-web\css\regular.css">
+    <link rel="stylesheet" href="css\base.css">
+    <link rel="stylesheet" href="css\fonts.css">
+    <link rel="stylesheet" href="css\mau.css">
+    <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\all.css">
+    <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\regular.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -31,13 +31,13 @@
 <body>
     <div class="wrapper">
         <aside class="main-sidebar sidebar-dark-primary elevation-4 text-sm">
-            <a class="brand-link" href="http://localhost:60/admin">
-                <img class="brand-image" src="./assets/images/logo.png" alt="">
+            <a class="brand-link" href="http://localhost/DATN/web/DATN-MAIN/admin/">
+                <img class="brand-image" src="../assets/images/logo/logo.png" alt="">
                 <div class="header__cpnname">
                     Trang Admin
                 </div>
             </a>
-            <a class="nav-link nav_btn_admin" href="http://localhost:60/admin">
+            <a class="nav-link nav_btn_admin" href="http://localhost/DATN/web/DATN-MAIN/admin/">
                 Trang chủ
             </a>
             <a class="nav-link nav_btn_admin" href="books.php">
@@ -52,7 +52,7 @@
             </aside>
             <div class="content-wrapper">
                 <!-- Header -->
-                <nav class="main-header navbar navbar-expand navbar-white navbar-light text-sm">
+                <nav class=" navbar navbar-expand navbar-white navbar-light text-sm">
 
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
@@ -79,7 +79,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="wrapper1">
+                <div class="">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
@@ -114,7 +114,7 @@
                                                     //echo "<td>" . $row['HinhAnh'] . "</td>";
                                                     ?>
                                                     <td>
-                                                        <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
+                                                        <img alt="ảnh lỗi" src='../assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
                                                     </td>
                                                     <?php
                                                     echo "<td>" . $row['TenSach'] . "</td>";

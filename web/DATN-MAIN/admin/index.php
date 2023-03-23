@@ -4,17 +4,19 @@
         <meta charset="UTF-8">
         <title>Admin</title>
         <!--<link rel="stylesheet" href="admin\css\style.css">-->
-        <link rel="stylesheet" href="admin\css\base.css">
-        <link rel="stylesheet" href="admin\css\fonts.css">
-        <link rel="stylesheet" href="admin\css\mau.css">
-        <link rel="stylesheet" href="assets\fontawesome-free-6.3.0-web\css\all.css">
-        <link rel="stylesheet" href="assets\fontawesome-free-6.3.0-web\css\regular.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css\base.css">
+        <link rel="stylesheet" href="css\fonts.css">
+        <link rel="stylesheet" href="css\mau.css">
+        <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\all.css">
+        <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\regular.css">
     </head>
     <body>
         <div class="wrapper">
             <aside class="main-sidebar sidebar-dark-primary elevation-4 text-sm">
-                <a class="brand-link" href="http://localhost:60/admin">
-                    <img class="brand-image" src="./assets/images/logo.png" alt="">
+                <a class="brand-link" href="http://localhost/DATN/web/DATN-MAIN/admin/">
+                    <img class="brand-image" src="../assets/images/logo/logo.png" alt="">
                     <div class="header__cpnname">
                         Trang Admin
                     </div>
@@ -34,7 +36,7 @@
             </aside>
             <div class="content-wrapper ">
                 <!-- Header -->
-                <nav class="main-header navbar navbar-expand navbar-white navbar-light text-sm">
+                <nav class="navbar navbar-expand navbar-white navbar-light text-sm">
 
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
