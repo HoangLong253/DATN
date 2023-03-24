@@ -355,7 +355,9 @@
                         // Include config file
                         require_once "config.php";
 
-                        $sql2 = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK'";
+                        $sql2 = "SELECT * FROM Sach 
+                        WHERE MaLoaiSach = 'GK'
+                        order by sach.MaSach";
 
                         if($result = $mysqli->query($sql2)){
                             if($result->field_count > 0){
