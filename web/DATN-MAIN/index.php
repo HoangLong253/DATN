@@ -32,7 +32,7 @@
                 <div class="wrap-content">
                     <div class="header__navbar">
                         <ul class="header__navbar-list">
-                            <a href="https://bom.so/pPF8sq" class="header__navbar-item header__navbar-item--separate ">
+                        <a href="https://bom.so/pPF8sq" class="header__navbar-item header__navbar-item--separate " target="new">
                                 <i class="header__navbar-icon fa-solid fa-location-dot"></i>
                                 125/2 Hoà Hưng, P12, Q10, TP HCM
                             </a>
