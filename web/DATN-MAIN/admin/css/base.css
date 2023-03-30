@@ -7,7 +7,9 @@ html{font-size:16px;line-height:20px;font-family:'MuliRegular',sans-serif;box-si
 .d-flex{display:flex;}
 .justify-content-between{justify-content:space-between;}
 .align-items-center{align-items:center;}
+
 .f-wrap{flex-wrap: wrap;}
+
 paddingtop50{padding-top: 50px;}
 paddingbottom50{padding-bottom: 50px;}
 .padding50{padding: 50px 0;}

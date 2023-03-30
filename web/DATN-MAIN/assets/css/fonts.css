@@ -3,7 +3,7 @@
     src: url('../fonts/Muli-Bold.woff2') format('woff2'),
         url('../fonts/Muli-Bold.woff') format('woff');
     font-weight: bold;
-    font-style: bold;
+    font-style: normal;
 }
 @font-face {
     font-family: 'MuliRegular';
@@ -165,7 +165,7 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'Mulish';
+    font-family: 'Mulish-ExtraLight';
     src: url('../fonts/Mulish-ExtraLight.woff2') format('woff2'),
         url('../fonts/Mulish-ExtraLight.woff') format('woff');
     font-weight: 200;
@@ -181,45 +181,67 @@
     font-display: swap;
 }
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
-        url('../fonts/RobotoSlab-Regular.woff') format('woff');
+    font-family: 'Roboto Mono';
+    src: url('../fonts/RobotoMono-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoMono-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'VNF-Shelia';
-    src: url('../fonts/VNF-Shelia.woff2') format('woff2'),
-        url('../fonts/VNF-Shelia.woff') format('woff');
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Thin.woff2') format('woff2'),
+        url('../fonts/Montserrat-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Mulish-ExtraBold';
+    src: url('../fonts/Mulish-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Mulish-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Mulish-Black';
+    src: url('../fonts/Mulish-Black.woff2') format('woff2'),
+        url('../fonts/Mulish-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Mulish-Regular';
+    src: url('../fonts/Mulish-Regular.woff2') format('woff2'),
+        url('../fonts/Mulish-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Shelia VNF';
-    src: url('../fonts/SheliaVNF.woff2') format('woff2'),
-        url('../fonts/SheliaVNF.woff') format('woff');
-    font-weight: normal;
+    font-family: 'HelveticaNeue-CondensedBold';
+    src: url('../fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
+        url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+
+
 @font-face {
-    font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
-        url('../fonts/PlayfairDisplay-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'UTM American Sans';
-    src: url('../fonts/UTMAmericanSans.woff2') format('woff2'),
-        url('../fonts/UTMAmericanSans.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Mulish-Bold';
+    src: url('../fonts/Mulish-Bold.woff2') format('woff2'),
+        url('../fonts/Mulish-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+
+
+
+
 
 
 

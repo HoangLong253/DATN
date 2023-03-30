@@ -109,7 +109,7 @@
                                                         case 'GK' : {
                                                         ?>
                                                         <td>
-                                                            <img alt="ảnh lỗi" src='../assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
+                                                            <img alt="ảnh lỗi" src='../assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="70" height="100"></img>
                                                         </td>
                                                         <?php
                                                         break;
@@ -117,7 +117,7 @@
                                                         case 'TK' : {
                                                         ?>
                                                         <td>
-                                                            <img alt="ảnh lỗi" src='../assets/images/sach/TK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
+                                                            <img alt="ảnh lỗi" src='../assets/images/sach/TK/<?php echo $row['HinhAnh'] ?>' width="70" height="100"></img>
                                                         </td>
                                                         <?php
                                                         break;
@@ -125,7 +125,7 @@
                                                         default: {
                                                         ?>
                                                         <td>
-                                                            <img alt="ảnh lỗi" src='../assets/images/sach/TK/unknown-file-.jpg' width="150" height="200"></img>
+                                                            <img alt="ảnh lỗi" src='../assets/images/sach/TK/unknown-file-.jpg' width="70" height="100"></img>
                                                         </td>
                                                         <?php
                                                         break;

@@ -3,6 +3,7 @@
 img{max-width:100%;height:auto;vertical-align:top;}
 p{margin:0px;}
 a{text-decoration:unset;}
+
 /* header */
 
 .header{height:var(--header-hieght);background-image:linear-gradient(0,#97DEFF,#AA77FF);}
@@ -146,6 +147,10 @@ to{opacity:1;transform:scale(1);}
 .box-product{text-align:center;}
 .image-product{width:100%;height:300px;background-color:#d00;margin-bottom:1rem;}
 
+/* Footer */
+.footer-powered {
+    background: black;
+}
 /*admin style*/
 
 .wrapper .main-aside{
