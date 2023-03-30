@@ -247,11 +247,6 @@ display: flex;
 @media only screen and (max-width:500px){.product-list{grid-template-columns:repeat(2,1fr);grid-gap:15px;}
 .title-aboutus{font-size:25px;}
 }
-.product-sale {
-    position: fixed;
-    right: 7px;
-    top: 4px;
-}
 .product-sale span.sale-lb {
   font-size: 14px;
   color: #fff;
@@ -261,4 +256,11 @@ display: flex;
   line-height: 40px;
   background: url(//theme.hstatic.net/200000287623/1000948667/14/discount.png?v=203) no-repeat center;
   background-size: contain;
+  position: absolute;
+}
+.product-sale {
+	position: relative;
+	right: -223px;
+	top: -17px;
+	z-index: 20;
 }

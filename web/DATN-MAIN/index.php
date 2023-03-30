@@ -81,7 +81,7 @@
                         <div class="owl-spnb owl-carousel owlCarousel">
 
                             <?php
-                                /*require_once "config.php";
+                                require_once "config.php";
 
                                 $sql1 = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK' AND NoiBat = 1";
 
@@ -110,17 +110,14 @@
                                 } else{
                                     echo "Oops! Đã xảy ra lỗi, Vui lòng thử lại lần sau.";
                                 }
-                            */?>
+                            ?>
 
 
                             
 
                             <!-- Ví dụ spnb -->
-                            <div class="product">
+                            <--<div class="product">
                                 <a href="#" class="box-product">
-                                    <div class="product-sale">
-                                        <span class="sale-lb">100</span>
-                                    </div>
                                     <div class="image-product">
                                         <img src="https://dictionary.cambridge.org/vi/images/thumb/book_noun_001_01679.jpg?version=5.0.305" alt="loi">
                                     </div>
@@ -145,8 +142,7 @@
                         // Include config file
                         require_once "config.php";
 
-                        $sql2 = "SELECT * FROM Sach 
-                        order by sach.MaSach";
+                        $sql2 = "SELECT *, DonGia - (DonGia * PhanTramGiam) as 'GiaGiam' FROM Sach order by sach.MaSach";
 
                         if($result = $mysqli->query($sql2)){
                             if($result->field_count > 0){
@@ -155,6 +151,15 @@
                                         <div class="product">
                                             <a href="#" class="box-product">
                                                 <?php
+                                                if($row['PhanTramGiam'] != 0) {
+                                                   ?>
+                                                    <div class="product-sale">
+                                                        <span class="sale-lb">-<?php echo $row['PhanTramGiam'] * 100?>%</span>
+                                                    </div>
+                                                   <?php 
+                                                } else {
+                                                    echo "";
+                                                }
                                                     switch ($row['MaLoaiSach']){
                                                         case 'GK' : {
                                                         ?>
@@ -184,12 +189,28 @@
                                                         }
                                                     }
                                                 ?>
-                                                <div class="infor-product">
-                                                    <?php
-                                                    echo '<div class="name-product">' . $row['TenSach'] . '</div>';
-                                                    echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
-                                                    ?>
-                                                </div>
+                                                <?php
+                                                    if($row['PhanTramGiam'] != 0) {
+                                                        ?>
+                                                            <div class="infor-product">
+                                                                <?php
+                                                                echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                                                echo '<div class="price-product">' . $row['GiaGiam'] . ' đ</div>';
+                                                                echo '<div class="price-product"> <del> ' . $row['DonGia'] . ' đ </del></div>';
+                                                                ?>
+                                                            </div>
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                            <div class="infor-product">
+                                                                <?php
+                                                                echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                                                echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
+                                                                ?>
+                                                            </div>
+                                                        <?php
+                                                    }
+                                                ?>
                                             </a>
                                         </div>
                                     <?php
