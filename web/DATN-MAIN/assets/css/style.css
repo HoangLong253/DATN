@@ -264,3 +264,20 @@ display: flex;
 	top: -17px;
 	z-index: 20;
 }
+.product-sale-oustanding span.sale-lb {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: url(//theme.hstatic.net/200000287623/1000948667/14/discount.png?v=203) no-repeat center;
+    background-size: contain;
+    position: absolute;
+  }
+.product-sale-oustanding {
+	position: relative;
+	right: -250px;
+	top: 1px;
+	z-index: 20;
+}

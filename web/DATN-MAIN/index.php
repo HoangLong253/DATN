@@ -83,7 +83,7 @@
                             <?php
                                 require_once "config.php";
 
-                                $sql1 = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK' AND NoiBat = 1";
+                                $sql1 = "SELECT *, DonGia - (DonGia * PhanTramGiam) as 'GiaGiam' FROM Sach WHERE MaLoaiSach = 'GK' AND NoiBat = 1";
 
                                 if($result1 = $mysqli->query($sql1)){
                                     if($result1->field_count > 0){
@@ -91,13 +91,40 @@
                                         ?>
                                             <div class="product">
                                                 <a href="#" class="box-product">
+                                                    <?php
+                                                        if($row['PhanTramGiam'] != 0) {
+                                                            ?>
+                                                             <div class="product-sale-oustanding">
+                                                                 <span class="sale-lb">-<?php echo $row['PhanTramGiam'] * 100?>%</span>
+                                                             </div>
+                                                            <?php 
+                                                         }
+                                                    ?>
                                                     <div class="images-product scale-img">
-                                                        <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="200" height="300"></img>
+                                                        <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
                                                     </div>
                                                     <div class="infor-product">
                                                     <?php
-                                                        echo '<div class="name-product">' . $row['TenSach'] . '</div>';
-                                                        echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
+                                                        if($row['PhanTramGiam'] != 0) {
+                                                        ?>
+                                                            <div class="infor-product">
+                                                                <?php
+                                                                echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                                                echo '<div class="price-product">' . $row['GiaGiam'] . ' đ</div>';
+                                                                echo '<div class="price-product"> <del> ' . $row['DonGia'] . ' đ </del></div>';
+                                                                ?>
+                                                            </div>
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                            <div class="infor-product">
+                                                                <?php
+                                                                echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                                                echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
+                                                                ?>
+                                                            </div>
+                                                        <?php
+                                                    }
                                                     ?>
                                                     </div>
                                                 </a>
@@ -116,7 +143,7 @@
                             
 
                             <!-- Ví dụ spnb -->
-                            <--<div class="product">
+                            <!--<div class="product">
                                 <a href="#" class="box-product">
                                     <div class="image-product">
                                         <img src="https://dictionary.cambridge.org/vi/images/thumb/book_noun_001_01679.jpg?version=5.0.305" alt="loi">
@@ -126,7 +153,7 @@
                                         <div class="price-product"> 29.000.000 vnd</div>
                                     </div>
                                 </a>
-                            </div>
+                            </div>-->
                             <!-- end ví dụ -->
                         </div>
                     </div>
