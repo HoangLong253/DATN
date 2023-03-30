@@ -84,7 +84,7 @@
                                     require_once "config.php";
                     
                                     // Attempt select query execution
-                                    $sql = "SELECT *, DonGia - (DonGia * PhanTramGiam) as 'GiaGiam' FROM Sach s join NhaXuatBan nxb on s.MaNXB = nxb.MaNXB";
+                                    $sql = "SELECT *, DonGia - (DonGia * PhanTramGiam) as 'GiaGiam' FROM Sach s join NhaXuatBan nxb on s.MaNXB = nxb.MaNXB where s.TrangThai = 1";
                                     if($result = $mysqli->query($sql)){
                                         if($result->num_rows > 0){
                                             echo '<table class="table table-bordered table-striped">';
@@ -95,6 +95,7 @@
                                             echo "<th>Nhà xuất bản</th>";
                                             echo "<th>Nổi bật</th>";
                                             echo "<th>Đơn giá</th>";
+                                            echo "<th>Phần trăm giảm</th>";
                                             echo "<th>Giá giảm</th>";
                                             echo "<th>Trạng thái</th>";
                                             echo "<th>Chức năng</th>";
@@ -139,6 +140,7 @@
                                                 </td>
                                                 <?php
                                                     echo "<td>" . $row['DonGia'] . "đ</td>";
+                                                    echo "<td>" . $row['PhanTramGiam'] . "</td>";
                                                     echo "<td>" . $row['GiaGiam'] . "đ</td>";
                                                     //echo "<td>" . $row['TrangThai'] . "</td>";
                                                 ?>

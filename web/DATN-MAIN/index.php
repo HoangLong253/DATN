@@ -81,7 +81,7 @@
                         <div class="owl-spnb owl-carousel owlCarousel">
 
                             <?php
-                                require_once "config.php";
+                                /*require_once "config.php";
 
                                 $sql1 = "SELECT * FROM Sach WHERE MaLoaiSach = 'GK' AND NoiBat = 1";
 
@@ -110,39 +110,26 @@
                                 } else{
                                     echo "Oops! Đã xảy ra lỗi, Vui lòng thử lại lần sau.";
                                 }
-                            ?>
+                            */?>
 
 
                             
 
                             <!-- Ví dụ spnb -->
-                            <!--<div class="product">
-                                <a href="" class="box-product">
-                                    <div class="image-product"></div>
+                            <div class="product">
+                                <a href="#" class="box-product">
+                                    <div class="product-sale">
+                                        <span class="sale-lb">100</span>
+                                    </div>
+                                    <div class="image-product">
+                                        <img src="https://dictionary.cambridge.org/vi/images/thumb/book_noun_001_01679.jpg?version=5.0.305" alt="loi">
+                                    </div>
                                     <div class="infor-product">
                                         <div class="name-product">Iphone 14 pro max 256gb</div>
                                         <div class="price-product"> 29.000.000 vnd</div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="product">
-                                <a href="" class="box-product">
-                                    <div class="image-product"></div>
-                                    <div class="infor-product">
-                                        <div class="name-product">Iphone 14 pro max 256gb</div>
-                                        <div class="price-product"> 29.000.000 vnd</div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="product">
-                                <a href="" class="box-product">
-                                    <div class="image-product"></div>
-                                    <div class="infor-product">
-                                        <div class="name-product">Iphone 14 pro max 256gb</div>
-                                        <div class="price-product"> 29.000.000 vnd</div>
-                                    </div>
-                                </a>
-                            </div>-->
                             <!-- end ví dụ -->
                         </div>
                     </div>
@@ -159,29 +146,54 @@
                         require_once "config.php";
 
                         $sql2 = "SELECT * FROM Sach 
-                        WHERE MaLoaiSach = 'GK'
                         order by sach.MaSach";
 
                         if($result = $mysqli->query($sql2)){
                             if($result->field_count > 0){
                                 while($row = $result->fetch_array()){
                                     ?>
-                        <div class="product ">
-                            <a href="#" class="box-product">
-                                <div class="image-product scale-img">
-                                    <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>'
-                                        width="200" height="300"></img>
-                                </div>
-                                <div class="infor-product">
+                                        <div class="product">
+                                            <a href="#" class="box-product">
+                                                <?php
+                                                    switch ($row['MaLoaiSach']){
+                                                        case 'GK' : {
+                                                        ?>
+                                                        <div class="image-product scale-img">
+                                                            <img alt="ảnh lỗi" src='./assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>'
+                                                             width="200" height="300"></img>
+                                                        </div>
+                                                        <?php
+                                                        break;
+                                                        }
+                                                        case 'TK' : {
+                                                        ?>
+                                                        <div class="image-product scale-img">
+                                                            <img alt="ảnh lỗi" src='./assets/images/sach/TK/<?php echo $row['HinhAnh'] ?>'
+                                                             width="200" height="300"></img>
+                                                        </div>
+                                                        <?php
+                                                        break;
+                                                        }
+                                                        default: {
+                                                        ?>
+                                                        <td>
+                                                            <img alt="ảnh lỗi" src='../assets/images/sach/TK/unknown-file-.jpg' width="150" height="200"></img>
+                                                        </td>
+                                                        <?php
+                                                        break;
+                                                        }
+                                                    }
+                                                ?>
+                                                <div class="infor-product">
+                                                    <?php
+                                                    echo '<div class="name-product">' . $row['TenSach'] . '</div>';
+                                                    echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
+                                                    ?>
+                                                </div>
+                                            </a>
+                                        </div>
                                     <?php
-                                        echo '<div class="name-product">' . $row['TenSach'] . '</div>';
-                                        echo '<div class="price-product">' . $row['DonGia'] . ' đ</div>';
-                                    ?>
-                                </div>
-                            </a>
-                        </div>
-                        <?php
-                            }
+                                }
                             } else{
                                 echo '<div class="alert alert-danger"><em>Không có dữ liệu sách.</em></div>';
                             }
