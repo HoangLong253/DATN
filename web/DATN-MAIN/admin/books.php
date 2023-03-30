@@ -13,11 +13,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <style>
-        table tr td:last-child{
-            width: 200px;
-        }
-    </style>
+
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
@@ -108,11 +104,32 @@
                                             while($row = $result->fetch_array()){
                                                 echo "<tr>";
                                                     //echo "<td>" . $row['HinhAnh'] . "</td>";
-                                                    ?>
-                                                    <td>
-                                                        <img alt="ảnh lỗi" src='../assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
-                                                    </td>
-                                                    <?php
+                                                    switch ($row['MaLoaiSach']){
+                                                        case 'GK' : {
+                                                        ?>
+                                                        <td>
+                                                            <img alt="ảnh lỗi" src='../assets/images/sach/GK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
+                                                        </td>
+                                                        <?php
+                                                        break;
+                                                        }
+                                                        case 'TK' : {
+                                                        ?>
+                                                        <td>
+                                                            <img alt="ảnh lỗi" src='../assets/images/sach/TK/<?php echo $row['HinhAnh'] ?>' width="150" height="200"></img>
+                                                        </td>
+                                                        <?php
+                                                        break;
+                                                        }
+                                                        default: {
+                                                        ?>
+                                                        <td>
+                                                            <img alt="ảnh lỗi" src='../assets/images/sach/TK/unknown-file-.jpg' width="150" height="200"></img>
+                                                        </td>
+                                                        <?php
+                                                        break;
+                                                        }
+                                                    }
                                                     echo "<td>" . $row['TenSach'] . "</td>";
                                                     echo "<td>" . $row['TenNXB'] . "</td>";
                                                     //echo "<td>" . $row['NoiBat'] . "</td>";
@@ -134,7 +151,7 @@
                                                     echo '<a id="del_btn" href="delete.php" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                                 echo "</td>";
                                             echo "</tr>";
-                                }
+                                            }
                                 echo "</tbody>";                            
                             echo "</table>";
                             // Free result set
