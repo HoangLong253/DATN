@@ -64,7 +64,28 @@
                     </ul>
 
                 </nav>
-
+                <div class="container-fluid">
+                    <div class="mt-5 mb-3 clearfix">
+                        <h2 class="pull-left">Thêm sách</h2>
+                    </div>
+                    <div>
+                        <input type="text" data="" id="" placeholder="Nhập mã sách" value required>
+                        <input type="text" data="" id="" placeholder="Nhập tên sách" value required>
+                    </div> <br>
+                    <div>
+                        <input type="text" data="" id="" placeholder="Nhập đơn giá" value required>
+                        <input type="text" data="" id="" placeholder="Nhập phầm trăm giảm" value required>
+                    </div> <br>
+                    <div>
+                        <input type="checkbox" id="" name="NoiBat" value="yes"/>
+                        Nổi bật
+                    </div> <br>
+                    <div>
+                        <textarea name="desc" id="desc-1" cols="100" rows="10" placeholder="Nhập mô tả"></textarea>
+                    </div> <br>
+                    <button> Thêm ảnh </button>
+                    <a href="#" class="admin-btn  btn-success"><i class="fa fa-plus"></i>Thêm</a>
+                </div>
             </div>
         </div>
     </body>

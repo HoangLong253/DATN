@@ -31382,3 +31382,19 @@ a.text-muted:hover {
     top: -18px;
     z-index: 20;
 }
+
+.admin-btn {
+  min-width: 157px;
+  height:36px;
+  text-decoration:none;
+  border:none;
+  border-radius:3px;
+  padding: 4.5px 70px;
+  font-size:15px;
+  outline:none;
+  cursor:pointer;
+  color:var(--text-color);
+  justify-content:center;
+  align-items:center;
+  line-height:16px
+}
