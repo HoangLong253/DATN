@@ -131,7 +131,7 @@ to{opacity:1;transform:scale(1);}
 /*Sản phẩm*/
 .product-list{display:grid;grid-template-columns:repeat(4,1fr);grid-gap:20px;}
 .box-product{text-align:center;}
-.image-product{width:220px ;height:300px;margin-bottom:1rem;}
+.image-product{width:285px ;height:300px;margin-bottom:1rem;}
 .owl-carousel .owl-item img {
     display: block;
     
@@ -167,6 +167,6 @@ to{opacity:1;transform:scale(1);}
 .title-aboutus{font-size:25px;}
 }
 .product-sale span.sale-lb{font-size:14px;color:#fff;display:block;width:40px;height:40px;line-height:40px;background:url(//theme.hstatic.net/200000287623/1000948667/14/discount.png?v=203) no-repeat center;background-size:contain;position:absolute;}
-.product-sale{position:relative;right:-223px;top:-17px;z-index:20;}
+.product-sale{position:relative;right:-222px;top:-16px;z-index:20;}
 .product-sale-oustanding span.sale-lb{font-size:14px;color:#fff;display:block;width:40px;height:40px;line-height:40px;background:url(//theme.hstatic.net/200000287623/1000948667/14/discount.png?v=203) no-repeat center;background-size:contain;position:absolute;}
 .product-sale-oustanding{position:relative;right:-250px;top:1px;z-index:20;}
