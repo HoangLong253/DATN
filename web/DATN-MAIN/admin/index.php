@@ -6,9 +6,9 @@
         <!--<link rel="stylesheet" href="admin\css\style.css">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css\base.css">
-        <link rel="stylesheet" href="css\fonts.css">
-        <link rel="stylesheet" href="css\mau.css">
+        <link rel="stylesheet" href=".\assets\css\base.css">
+        <link rel="stylesheet" href=".\assets\css\fonts.css">
+        <link rel="stylesheet" href=".\assets\css\mau.css">
         <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\all.css">
         <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\regular.css">
     </head>
@@ -21,7 +21,7 @@
                         Trang Admin
                     </div>
                 </a>
-            <a class="nav-link nav_btn_admin" href="">
+            <a class="nav-link nav_btn_admin" href="index.php">
                 Trang chủ
             </a>
             <a class="nav-link nav_btn_admin" href="books.php">

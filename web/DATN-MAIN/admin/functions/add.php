@@ -2,10 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=1366">
         <title>Admin</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="../assets/font/..">
         <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/..">
         <link rel="stylesheet" href="../assets/css/mau.css">
@@ -16,22 +15,22 @@
     <body>
         <div class="wrapper">
             <aside class="main-sidebar sidebar-dark-primary elevation-4 text-sm">
-                <a class="brand-link" href="#">
+                <a class="brand-link" href="http://localhost/DATN/web/DATN-MAIN/admin/">
                     <img class="brand-image" src="../assets/images/logo/logo.png" alt="">
                     <div class="header__cpnname">
                         Trang Admin
                     </div>
                 </a>
-            <a class="nav-link nav_btn_admin" href="">
+            <a class="nav-link nav_btn_admin" href="../index.php">
                 Trang chủ
             </a>
-            <a class="nav-link nav_btn_admin" href="books.php">
+            <a class="nav-link nav_btn_admin" href="../books.php">
                 Sách
             </a>
-            <a class="nav-link nav_btn_admin" href="employees.php">
+            <a class="nav-link nav_btn_admin" href="../employees.php">
                 Nhân Viên
             </a>
-            <a class="nav-link nav_btn_admin" href="users.php">
+            <a class="nav-link nav_btn_admin" href="../users.php">
                 Người dùng
             </a>
             </aside>

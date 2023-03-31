@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="css\base.css">
-    <link rel="stylesheet" href="css\fonts.css">
-    <link rel="stylesheet" href="css\mau.css">
-    <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\all.css">
-    <link rel="stylesheet" href="..\assets\fontawesome-free-6.3.0-web\css\regular.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/mau.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href=".\assets\fontawesome-free-6.3.0-web\css\all.css">
+    <link rel="stylesheet" href=".\assets\fontawesome-free-6.3.0-web\css\regular.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -56,7 +56,7 @@
                     <!-- Đăng xuất -->
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item d-sm-inline-block">
-                            <a href="../" target="_blank" class="nav-link"><i class="fas fa-reply"></i></a>
+                            <a href="" target="_blank" class="nav-link"><i class="fas fa-reply"></i></a>
                         </li>
                         <li class="nav-item d-sm-inline-block">
                             <a id="dropdownSubMenu-info" href="#" class="nav-link dropdown-toggle">
