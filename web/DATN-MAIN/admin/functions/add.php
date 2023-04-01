@@ -73,12 +73,12 @@
                     <form action="POST">
                         Mã sách:
                         <div>
-                            <input type="text" data="" id="" placeholder="Nhập mã sách" value required>
+                            <input type="text" name="bookid" placeholder="Nhập mã sách" value required>
                         </div> <br>
 
                         Tên sách:
                         <div>
-                            <input type="text" data="" id="" placeholder="Nhập tên sách" value required>
+                            <input type="text" name="bookname" placeholder="Nhập tên sách" value required>
                         </div> <br>
                         Nhà xuất bản:
                         <div>
@@ -98,7 +98,7 @@
                         </div> <br>
                         Loại sách:
                         <div>
-                            <select name="publisher" id="publisher">
+                            <select name="booktype" id="">
                                 <?php
                                     require_once('../config.php');
                                     $sql2 = 'SELECT TenLoaiSach FROM loaisach';
@@ -114,27 +114,27 @@
                         </div> <br>
                         Đơn giá:
                         <div>
-                            <input type="text" data="" id="" placeholder="Nhập đơn giá" value required>
+                            <input type="text" name="price" placeholder="Nhập đơn giá" value required>
                         </div> <br>
 
                         Phần trăm giảm:
                         <div>
-                            <input type="text" data="" id="" placeholder="Nhập phầm trăm giảm" value required>
+                            <input type="text" name="discount" placeholder="Nhập phầm trăm giảm" value required>
                         </div> <br>
 
                         <div>
-                            <input type="checkbox" id="" name="NoiBat" value="yes"/>
+                            <input type="checkbox" name="outstanding" name="NoiBat" value="yes"/>
                             Nổi bật
                         </div> <br>
                         <div>
-                            <textarea name="desc" id="desc-1" cols="100" rows="10" placeholder="Nhập mô tả"></textarea>
+                            <textarea name="desc" cols="100" rows="10" placeholder="Nhập mô tả"></textarea>
                         </div> <br>
                         <div>
                             <label for="files">Thêm ảnh:</label> <br>
-                            <input type="file" id="files" name="files" multiple>
+                            <input type="file" id="files" name="book_pic_files" multiple>
                         </div> <br>
                         <div> 
-                            <a href="add_func.php" class="admin-btn btn-success">Lưu</a>
+                            <a type="submit" name="insert-book" class="admin-btn btn-success">Thêm</a>
                         </div>
                     </form>
                 </div>
