@@ -14,11 +14,13 @@
                             <!-- Số dòng của các footer-... nên bằng nhau vì khi ko bằng sẽ lệch / Not done yet! -->
                             <div class="footer-policy">
                                 <div class="footer-title-text">CHÍNH SÁCH</div>
-                                <div class="footer-text">Chính sách khách hàng</div>
-                                <div class="footer-text">Chính sách bảo mật</div>
-                                <div class="footer-text">Chính sách đổi trả</div>
-                                <div class="footer-text">Chính sách thanh toán</div>
-                                <div class="footer-text">Chính sách giao hàng</div>
+                                <ul>
+                                    <li><a class="footer-text" href="">Chính sách khách hàng</a></li>
+                                    <li><a class="footer-text" href="">Chính sách bảo mật</a></li>
+                                    <li><a class="footer-text" href="">Chính sách đổi trả</a></li>
+                                    <li><a class="footer-text" href="">Chính sách thanh toán</a></li>
+                                    <li><a class="footer-text" href="">Chính sách giao hàng</a></li>
+                                </ul>
                             </div>
                             <div class="footer-fanpage">
                                 <div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100089910812626"

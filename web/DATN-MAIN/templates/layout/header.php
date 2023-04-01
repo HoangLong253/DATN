@@ -34,7 +34,7 @@
                             <ul class="header__notify-list">
                                 <li class="header__notify-item header__notify-item--viewed">
                                     <a class="header__notify-link" href="">
-                                        <span> <img class="header__notify-img" src="./assets/images/logo.png" alt=""
+                                        <span> <img class="header__notify-img" src="./assets/images/logo/logo.png" alt=""
                                                 class="header__notify-img">
                                         </span>
                                         <div class="header__notify-infor">
@@ -45,7 +45,7 @@
                                 </li>
                                 <li class="header__notify-item header__notify-item--viewed">
                                     <a class="header__notify-link" href="">
-                                        <span> <img class="header__notify-img" src="./assets/images/logo.png" alt=""
+                                        <span> <img class="header__notify-img" src="./assets/images/logo/logo.png" alt=""
                                                 class="header__notify-img">
                                         </span>
                                         <div class="header__notify-infor">
@@ -56,7 +56,7 @@
                                 </li>
                                 <li class="header__notify-item header__notify-item--viewed">
                                     <a class="header__notify-link" href="">
-                                        <span> <img class="header__notify-img" src="./assets/images/logo.png" alt=""
+                                        <span> <img class="header__notify-img" src="./assets/images/logo/logo.png" alt=""
                                                 class="header__notify-img">
                                         </span>
                                         <div class="header__notify-infor">
@@ -125,7 +125,7 @@
                         </span>
                         <!-- No cart: header__cart-list-no-cart-->
                         <div class="header__cart-list ">
-                            <img src="./assets/images/no-cart.png" alt="" class="header__cart-no-cart-img">
+                            <img src="./assets/images/chi-tiet/no-cart.png" alt="" class="header__cart-no-cart-img">
                             <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
 
                             <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
