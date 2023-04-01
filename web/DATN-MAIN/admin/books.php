@@ -77,7 +77,7 @@
                             <div class="col-md-12">
                                 <div class="mt-5 mb-3 clearfix">
                                     <h2 class="pull-left">Danh sách các quyển sách</h2>
-                                    <a href="./functions/add.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>Thêm</a>
+                                    <a href="./functions/book_add.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>Thêm</a>
                                 </div>
                                 <?php
                                     // Include config file

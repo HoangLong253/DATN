@@ -77,7 +77,7 @@
                             <div class="col-md-12">
                                 <div class="mt-5 mb-3 clearfix">
                                     <h2 class="pull-left">Danh sách nhân viên</h2>
-                                    <a href="create.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>Thêm</a>
+                                    <a href="./functions/emp_add.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i>Thêm</a>
                                 </div>
                                 <?php
                     // Include config file
