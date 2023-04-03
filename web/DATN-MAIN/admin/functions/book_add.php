@@ -134,7 +134,7 @@
                             <input type="file" id="files" name="book_pic_files" multiple>
                         </div> <br>
                         <div> 
-                            <a type="submit" name="insert-book" class="admin-btn btn-success">Thêm</a>
+                            <button type="submit" name="insert-book" class="admin-btn btn-success">Thêm</button>
                         </div>
                     </form>
                 </div>

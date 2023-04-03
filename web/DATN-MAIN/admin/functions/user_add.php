@@ -70,7 +70,7 @@
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Thêm người dùng</h2>
                     </div>
-                    <form action="POST">
+                    <form action="./add_func.php" method="POST">
                         Mã người dùng:
                         <div>
                             <input type="text" name="userid" placeholder="Nhập người dùng" value required>
@@ -88,11 +88,11 @@
 
                         Số điện thoại:
                         <div>
-                            <input type="text" name="discount" placeholder="Nhập số điện thoại" value required>
+                            <input type="text" name="phone" placeholder="Nhập số điện thoại" value required>
                         </div> <br>
 
                         <div> 
-                            <a type="submit" name="insert-user" class="admin-btn btn-success">Thêm</a>
+                            <button type="submit" name="insert-user" class="admin-btn btn-success">Thêm</button>
                         </div>
                     </form>
                 </div>

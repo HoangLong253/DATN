@@ -70,7 +70,7 @@
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Thêm nhân viên</h2>
                     </div>
-                    <form action="POST">
+                    <form action="./add_func.php" method="POST">
                         Mã nhân viên:
                         <div>
                             <input type="text" name="emp_id" placeholder="Nhập mã nhân viên" value required>
@@ -86,23 +86,23 @@
                             <input type="text" name="email" placeholder="Nhập email" value required>
                         </div> <br>
 
-                        <!--Mật khẩu:
+                        Mật khẩu:
                         <div>
                             <input type="text" name="pass" placeholder="Nhập mật khẩu" value required>
-                        </div> <br>-->
+                        </div> <br>
 
                         Số điện thoại:
                         <div>
-                            <input type="text" name="discount" placeholder="Nhập số điện thoại" value required>
+                            <input type="text" name="phone" placeholder="Nhập số điện thoại" value required>
                         </div> <br>
 
                         <div>
-                            <input type="checkbox" name="outstanding" name="NoiBat" value="yes"/>
+                            <input type="checkbox" name="isadmin" name="NoiBat"/>
                             Admin
                         </div> <br>
 
                         <div> 
-                            <a type="submit" name="insert-employee" class="admin-btn btn-success">Thêm</a>
+                            <button type="submit" name="insert-employee" class="admin-btn btn-success">Thêm</button>
                         </div>
                     </form>
                 </div>
