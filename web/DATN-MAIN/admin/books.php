@@ -150,7 +150,7 @@
                                                 <?php
                                                 echo "<td>";
                                                     echo '<a href="update.php" class="mr-3 func_icon !important" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                                    echo '<a id="del_btn" href="delete.php" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                                    echo '<a id="del_btn" href="./del_func.php" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
                                                 echo "</td>";
                                             echo "</tr>";
                                             }

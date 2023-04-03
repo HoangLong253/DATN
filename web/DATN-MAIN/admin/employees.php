@@ -118,8 +118,14 @@
                                             </td>
                                         <?php
                                         echo "<td>";
-                                            echo '<a href="update.php" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            echo '<a href="delete.php" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                            ?>
+                                                <a href="update.php" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>
+                                                <form action="./functions/del_func.php" method="POST">
+                                                    <button id="del_btn" class="fa fa-trash" name="emp_del" value="<?=$row['MaNV'];?>">
+                                                        
+                                                    </button>
+                                                </form>
+                                            <?php
                                         echo "</td>";
                                     echo "</tr>";
                                 }
