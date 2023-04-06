@@ -84,7 +84,7 @@
                                     require_once "config.php";
                     
                                     // Attempt select query execution
-                                    $sql = "SELECT *, DonGia - (DonGia * PhanTramGiam) as 'GiaGiam' FROM Sach s join NhaXuatBan nxb on s.MaNXB = nxb.MaNXB where s.TrangThai = 1 LIMIT 1,5";
+                                    $sql = "SELECT *, DonGia - (DonGia * PhanTramGiam) as 'GiaGiam' FROM Sach s join NhaXuatBan nxb on s.MaNXB = nxb.MaNXB where s.TrangThai = 1 LIMIT 1,10";
                                     if($result = $mysqli->query($sql)){
                                         if($result->num_rows > 0){
                                             echo '<table class="table table-bordered table-striped">';
@@ -188,6 +188,6 @@
                 </div>
             </div>
         </div>
-    <script src="assets/pagination/js/style.js"> </script>
+    <script src="./assets/pagination/js/style.js"></script>
 </body>
 </html>
