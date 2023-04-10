@@ -114,9 +114,9 @@
                                         echo "<td>";
                                             ?>
                                                 <a href="update.php" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>
-                                                <form action="./functions/del_func.php" method="post">
-                                                    <button id="del_btn" class="fa fa-trash" name="user_del" value="<?=$row['MaNgDung'];?>">
-                                                        
+                                                <form action="./functions/del_func.php" method="post" >
+                                                    <button id="del_btn" name="user_del" value="<?=$row['MaNgDung'];?>" title="Delete Record" data-toggle="tooltip">
+                                                        <span class="fa fa-trash"></span>
                                                     </button>
                                                 </form>
                                             <?php
